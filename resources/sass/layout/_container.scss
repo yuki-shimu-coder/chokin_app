@@ -1,0 +1,8 @@
+@use "../foundation/variable" as var;
+
+// ==================================
+// container
+// ==================================
+.l-container {
+  max-width: var.$site-width;
+}

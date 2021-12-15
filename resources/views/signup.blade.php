@@ -7,6 +7,10 @@
   <title>新規登録</title>
 </head>
 <body>
-  <header></header>
+  <header class="l-header">
+    <div class="l-container">
+      
+    </div>
+  </header>
 </body>
 </html>
