@@ -1,0 +1,24 @@
+@use "../../foundation/variable" as var;
+
+// ==================================
+// p-header
+// ==================================
+.p-header {
+    display: flex;
+    justify-content: space-around;
+    &__logo {
+        line-height: var.$header-height;
+        & > a {
+            padding: 22px;
+        }
+    }
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        width: 250px;
+        &-item > a{ 
+            padding: 22px;
+        }
+    }
+
+}

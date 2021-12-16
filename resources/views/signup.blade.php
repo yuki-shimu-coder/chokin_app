@@ -16,13 +16,13 @@
         <div class="p-header__logo">
           <a href="">
             <img src="" alt="">
-            Chokin
+            Chokin Diary
           </a>
         </div>
         <nav class="p-header__nav">
           <ul class="p-header__menu">
-            <li class="p-header__menu-item">ログイン</li>
-            <li class="p-header__menu-item">新規登録</li>
+            <li class="p-header__menu-item"><a href="">ログイン</a></li>
+            <li class="p-header__menu-item"><a href="">新規登録</a></li>
           </ul>
         </nav>
       </div>

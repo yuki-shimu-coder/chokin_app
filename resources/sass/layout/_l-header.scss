@@ -1,0 +1,15 @@
+@use '../foundation/variable' as var;
+
+// ==================================
+// l-header
+// ==================================
+.l-header {
+    height: var.$header-height;
+    position: fixed;
+    background-color: #454545;
+    width: 100%;
+    color: #fff;
+    & a {
+        color: #fff;
+    }
+}
