@@ -10,15 +10,20 @@
         line-height: var.$header-height;
         & > a {
             padding: 22px;
+            &:hover {
+                color: #1c81b8;
+            }
         }
     }
     &__menu {
         display: flex;
         justify-content: space-between;
         width: 250px;
-        &-item > a{ 
+        &-item > a {
             padding: 22px;
+            &:hover {
+                color: #1c81b8;
+            }
         }
     }
-
 }

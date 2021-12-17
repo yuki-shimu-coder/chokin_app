@@ -392,6 +392,7 @@ body {
      -moz-text-size-adjust: 100%;
           text-size-adjust: 100%;
   letter-spacing: 0.1em;
+  background-color: #D5DDE2;
 }
 
 p,
@@ -449,6 +450,10 @@ li {
   padding: 22px;
 }
 
+.p-header__logo > a:hover {
+  color: #1c81b8;
+}
+
 .p-header__menu {
   display: flex;
   justify-content: space-between;
@@ -457,5 +462,9 @@ li {
 
 .p-header__menu-item > a {
   padding: 22px;
+}
+
+.p-header__menu-item > a:hover {
+  color: #1c81b8;
 }
 
