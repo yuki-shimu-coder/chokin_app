@@ -27,7 +27,9 @@
             <li class="p-header__menu-item"><a href="">新規登録</a></li>
           </ul>
         </nav>
-        <i class="fas fa-bars"></i>
+        <div class="c-menu-trigger">
+          <i class="fas fa-bars"></i>
+        </div>
       </div>
     </div>
   </header>

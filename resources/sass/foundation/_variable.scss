@@ -28,8 +28,14 @@ $font-family_corp: "Amatic SC", cursive;
 
 // マップ型変数を使うと便利
 $breakpoints: (
-	"sm": "screen and (min-width: 375px)",
-	"md": "screen and (min-width: 768px)",
-	"lg": "screen and (min-width: 1366px)",
-	"xl": "screen and (min-width: 1920px)",
+    // SP基準でコーディングする場合はスマホのブレイクポイントを設定しない
+    "xs": 0,
+    // スマホ(576px ~ 767px)
+    "sm": "screen and (min-width: 576px)",
+    // タブレット(768px ~ 991px)
+    "md": "screen and (min-width: 768px)",
+		// pc(992px ~ 1199px)
+    "lg": "screen and (min-width: 992px)",
+		// pc(1200 ~)
+    "xl": "screen and (min-width: 1200px)"
 ) !default;

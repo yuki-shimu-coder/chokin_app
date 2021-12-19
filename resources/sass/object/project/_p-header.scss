@@ -1,4 +1,5 @@
 @use "../../foundation/variable" as var;
+@use "../../foundation/mixin";
 
 // ==================================
 // p-header
@@ -15,15 +16,45 @@
             }
         }
     }
+    &__nav {
+        // スマホファースト
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70vw;
+        background: rgba(69, 69, 69, 0.8);
+        // スマホデザイン
+        @include mixin.mq(sm) {
+        }
+        // タブレットデザイン
+        @include mixin.mq(md) {
+        }
+        // pcデザイン
+        @include mixin.mq(lg) {
+
+        }
+    }
     &__menu {
+        // スマホファースト
         display: flex;
         justify-content: space-between;
-        width: 250px;
-        &-item > a {
-            padding: 22px;
-            &:hover {
-                color: #1c81b8;
+        max-width: 250px;
+        display: block;
+        padding-top: var.$header-height;
+        &-item {
+            margin-bottom: 20px;
+
+            > a {
+                padding: 22px;
+                &:hover {
+                    color: #1c81b8;
+                }
             }
+        }
+        // pcデザイン
+        @include mixin.mq(lg) {
+            display: flex;
         }
     }
 }

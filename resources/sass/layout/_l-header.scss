@@ -1,5 +1,5 @@
 @use "../foundation/variable" as var;
-@use "../foundation/mixin" as mixin;
+@use "../foundation/mixin";
 
 // ==================================
 // l-header
@@ -7,25 +7,10 @@
 .l-header {
     height: var.$header-height;
     position: fixed;
-    background-color: #454545;
+    background-color: rgba(69, 69, 69, 0.5);
     width: 100%;
     color: #fff;
     & a {
         color: #fff;
-    }
-    // // スマホレスポンシブデザイン
-    @include mq(sm) {
-        .fas.fa-bars {
-            display: block;
-        }
-    }
-    // // タブレットレスポンシブデザイン
-    // @include mq(md) {
-    // }
-    // pcレスポンシブデザイン
-    @include mixin.mq(lg) {
-        .fas.fa-bars {
-            display: none;
-        }
     }
 }
