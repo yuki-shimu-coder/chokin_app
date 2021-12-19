@@ -5,7 +5,7 @@
 // ==================================
 .p-header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     &__logo {
         line-height: var.$header-height;
         & > a {

@@ -1,13 +1,20 @@
+@use "../foundation/variable" as var;
+
 // ==============================
 // mixin
 // ==============================
 // @mixinは関数のようなものを作れる
 // https://www.webcreatorbox.com/tech/sass-mixin
+
 // map-get()の第一引数に変数名、第二引数にマップ型のキーを渡すと、マップ型の値が返る
-// #{}は「インターポーレーション」といって、演算できない箇所、変数使えない箇所でも使えるようにするものcalcなどでよく使う
+
+// #{}は「インターポーレーション」といって、演算できない箇所、変数が使えない箇所でも使えるようにするものcalcなどでよく使う
+// 通常Sass変数を参照できる場所はプロパティの値のみとなっている！
+
 // http://book.scss.jp/code/c4/08.html
 @mixin mq($breakpoint: sm) {
-	@media #{map-get($breakpoints, $breakpoint)} {
-		@content;
-	}
+    // map-get($map, $key)
+    @media #{map-get(var.$breakpoints, $breakpoint)} {
+        @content;
+    }
 }

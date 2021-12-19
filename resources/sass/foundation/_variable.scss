@@ -28,8 +28,8 @@ $font-family_corp: "Amatic SC", cursive;
 
 // マップ型変数を使うと便利
 $breakpoints: (
-	"sm": "screen and (max-width: 414px)",
-	"md": "screen and (max-width: 768px)",
-	"lg": "screen and (max-width: 1000px)",
-	"xl": "screen and (max-width: 1200px)",
+	"sm": "screen and (min-width: 375px)",
+	"md": "screen and (min-width: 768px)",
+	"lg": "screen and (min-width: 1366px)",
+	"xl": "screen and (min-width: 1920px)",
 ) !default;

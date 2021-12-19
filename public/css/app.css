@@ -432,6 +432,12 @@ li {
   color: #fff;
 }
 
+@media screen and (min-width: 1366px) {
+  .l-header .fas.fa-bars {
+    display: none;
+  }
+}
+
 .l-container {
   max-width: 1300px;
   margin: 0 auto;
@@ -439,7 +445,7 @@ li {
 
 .p-header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .p-header__logo {
