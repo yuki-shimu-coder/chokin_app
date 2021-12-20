@@ -20,10 +20,10 @@
         // スマホファースト
         position: fixed;
         top: 0;
-        right: -100%;
+        right: 0;
         height: 100vh;
         width: 70vw;
-        background: rgba(69, 69, 69, 0.8);
+        background: rgba(27, 67, 93, 0.8);
         // スマホデザイン
         @include mixin.mq(sm) {
         }
@@ -32,21 +32,35 @@
         }
         // pcデザイン
         @include mixin.mq(lg) {
-
+            position: initial;
+            height: var.$header-height;
+            background: initial;
+            line-height: var.$header-height;
+            width: initial;
         }
     }
     &__menu {
         // スマホファースト
         display: flex;
-        justify-content: space-between;
-        max-width: 250px;
-        display: block;
-        padding-top: var.$header-height;
+        flex-direction: column;
+        margin-top: var.$header-height;
+        margin-left: 30px;
         &-item {
-            margin-bottom: 20px;
+            margin-bottom: 40px;
+            // スマホデザイン
+            @include mixin.mq(sm) {
+            }
+            // タブレットデザイン
+            @include mixin.mq(md) {
+            }
+            // pcデザイン
+            @include mixin.mq(lg) {
+                height: var.$header-height;
+                margin: initial;
+                margin-right: 30px;
+            }
 
             > a {
-                padding: 22px;
                 &:hover {
                     color: #1c81b8;
                 }
@@ -54,7 +68,9 @@
         }
         // pcデザイン
         @include mixin.mq(lg) {
-            display: flex;
+            flex-direction: row;
+            padding-top: 0;
+            margin: initial;
         }
     }
 }
