@@ -1,0 +1,19 @@
+@use "../../foundation/mixin";
+
+#p-input {
+    &-username {
+        position: relative;
+    }
+    &-email {
+        position: relative;
+    }
+    &-password {
+        position: relative;
+        &-re {
+            position: relative;
+        }
+    }
+    // pc画面
+    @include mixin.mq(lg) {
+    }
+}

@@ -1,0 +1,11 @@
+@use "../../foundation/variable" as var;
+
+.c-auth-input {
+    width: 400px;
+    height: 50px;
+    padding: 10px 20px 10px 60px;
+    font-size: var.$font-size_m;
+    border-radius: 100px;
+    display: block;
+    background: rgba(171, 202, 232, 1);
+}

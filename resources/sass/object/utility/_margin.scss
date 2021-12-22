@@ -1,0 +1,17 @@
+@use "../../foundation/variable" as var;
+
+.u-mg {
+    &--auto {
+        margin: 0 auto;
+    }
+    &b {
+        &--40 {
+            margin-bottom: var.$space_3l;
+        }
+    }
+    &r {
+        &--60 {
+            margin-right: 60px;
+        }
+    }
+}

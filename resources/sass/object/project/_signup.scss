@@ -1,0 +1,47 @@
+@use "../../foundation/variable" as var;
+@use "../../foundation/mixin";
+
+// ==================================
+// p-signup
+// ==================================
+.p-signup {
+    text-align: center;
+    // pcデザイン
+    @include mixin.mq(lg) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__img-wrap {
+        // pcデザイン
+        @include mixin.mq(lg) {
+            width: 30%;
+        }
+    }
+
+    &__form {
+        // pcデザイン
+        @include mixin.mq(lg) {
+            width: 30%;
+        }
+    }
+    p {
+        // pcデザイン
+        @include mixin.mq(lg) {
+            font-size: 20px;
+        }
+    }
+    &__button {
+        width: 200px;
+        height: 50px;
+        font-size: var.$font-size_xl;
+        background: rgba(121, 161, 212, 1);
+        color: #fff;
+        transition: 0.3s all;
+        &:hover {
+            cursor: pointer;
+            background: rgba(121, 161, 212, 0.7);
+        }
+    }
+}

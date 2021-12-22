@@ -24,6 +24,12 @@
 // contatier
 @use "layout/container";
 
+// main
+@use "layout/main";
+
+// footer
+@use "layout/footer";
+
 // ***************************************************************
 // object
 // ***************************************************************
@@ -31,11 +37,30 @@
 // ==============================
 // component
 // ==============================
+// haaderメニューボタン
 @use "object/component/menu-trigger";
+
+// 新規登録・ログイン画面の入力エリア
+@use "object/component/auth-input";
+
+// ボタン
+@use "object/component/button";
+
+// インプットエリアにフォントアイコンを重ねる
+@use "object/component/input-icon";
 
 // ==============================
 // project
 // ==============================
-@use "object/project/p-header"; // ==============================
+// header
+@use "object/project/p-header";
+// signup
+@use "object/project/signup";
+// input
+@use "object/project/input";
+
+// ==============================
 // utility
 // ==============================
+// margin
+@use "object/utility/margin";

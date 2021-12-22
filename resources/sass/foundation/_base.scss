@@ -6,7 +6,6 @@
 html,
 body {
     width: 100%;
-    color: var.$font-color_default;
     font-size: var.$font-size_default;
     line-height: 1.6;
     font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic,
@@ -37,11 +36,17 @@ img {
     width: 100%;
     vertical-align: bottom;
 }
-ul {
+ul,p {
     padding: 0;
     margin: 0;
 }
 
 li {
     list-style-type: none;
+}
+
+input,
+button {
+    box-sizing: border-box;
+    border: none;
 }

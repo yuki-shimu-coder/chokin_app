@@ -34,10 +34,11 @@
     </div>
   </header>
 
-  <main>
+  <main class="l-main">
     @yield('content')
   </main>
 
+  <footer class="l-footer"></footer>
 </body>
 
 </html>

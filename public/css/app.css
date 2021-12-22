@@ -384,7 +384,6 @@ template {
 html,
 body {
   width: 100%;
-  color: #777;
   font-size: 16px;
   line-height: 1.6;
   font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "\30D2\30E9\30AE\30CE\89D2\30B4\30B7\30C3\30AF   Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "\FF2D\FF33   \FF30\30B4\30B7\30C3\30AF", "MS PGothic", sans-serif;
@@ -416,7 +415,8 @@ img {
   vertical-align: bottom;
 }
 
-ul {
+ul,
+p {
   padding: 0;
   margin: 0;
 }
@@ -425,9 +425,16 @@ li {
   list-style-type: none;
 }
 
+input,
+button {
+  box-sizing: border-box;
+  border: none;
+}
+
 .l-header {
   height: 60px;
-  position: fixed;
+  top: 0;
+  left: 0;
   background-color: #454545;
   width: 100%;
   color: #fff;
@@ -442,6 +449,22 @@ li {
   margin: 0 auto;
 }
 
+.l-main {
+  margin: 40px 0;
+  height: 1500px;
+}
+
+.l-footer {
+  height: 60px;
+  background-color: #454545;
+  width: 100%;
+  color: #fff;
+}
+
+.l-footer a {
+  color: #fff;
+}
+
 .c-menu-trigger {
   display: block;
   font-size: 30px;
@@ -453,6 +476,30 @@ li {
   .c-menu-trigger {
     display: none;
   }
+}
+
+.c-auth-input {
+  width: 400px;
+  height: 50px;
+  padding: 10px 20px 10px 60px;
+  font-size: 14px;
+  border-radius: 100px;
+  display: block;
+  background: #abcae8;
+}
+
+.c-button {
+  padding: 10px 20px;
+  border-radius: 100px;
+}
+
+.c-input-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px 25px;
+  font-size: 20px;
+  color: #454545;
 }
 
 .p-header {
@@ -520,5 +567,77 @@ li {
     padding-top: 0;
     margin: initial;
   }
+}
+
+.p-signup {
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .p-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .p-signup__img-wrap {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .p-signup__form {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .p-signup p {
+    font-size: 20px;
+  }
+}
+
+.p-signup__button {
+  width: 200px;
+  height: 50px;
+  font-size: 24px;
+  background: #79a1d4;
+  color: #fff;
+  transition: 0.3s all;
+}
+
+.p-signup__button:hover {
+  cursor: pointer;
+  background: rgba(121, 161, 212, 0.7);
+}
+
+#p-input-username {
+  position: relative;
+}
+
+#p-input-email {
+  position: relative;
+}
+
+#p-input-password {
+  position: relative;
+}
+
+#p-input-password-re {
+  position: relative;
+}
+
+.u-mg--auto {
+  margin: 0 auto;
+}
+
+.u-mgb--40 {
+  margin-bottom: 40px;
+}
+
+.u-mgr--60 {
+  margin-right: 60px;
 }
 
