@@ -1,9 +1,23 @@
 @use "../foundation/variable" as var;
+@use "../foundation/mixin";
 
 // ==================================
 // container
 // ==================================
 .l-container {
-  max-width: var.$site-width;
-  margin: 0 auto;
+    margin: 0 auto;
+    // スマホ
+    max-width: var.$site-width-sm;
+    // タブレット
+    @include mixin.mq(md) {
+        max-width: var.$site-width-md;
+    }
+    // pc
+    @include mixin.mq(lg) {
+        max-width: var.$site-width-lg;
+    }
+    // pc大
+    @include mixin.mq(xl) {
+        max-width: var.$site-width-xl;
+    }
 }

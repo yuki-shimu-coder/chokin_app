@@ -445,8 +445,26 @@ button {
 }
 
 .l-container {
-  max-width: 1300px;
   margin: 0 auto;
+  max-width: 540px;
+}
+
+@media screen and (min-width: 768px) {
+  .l-container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .l-container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .l-container {
+    max-width: 1300px;
+  }
 }
 
 .l-main {
@@ -525,6 +543,7 @@ button {
   height: 100vh;
   width: 70vw;
   background: rgba(27, 67, 93, 0.8);
+  z-index: 99;
 }
 
 @media screen and (min-width: 992px) {
@@ -569,25 +588,25 @@ button {
 }
 
 .p-signup {
+  display: flex;
   text-align: center;
+  justify-content: center;
 }
 
 @media screen and (min-width: 992px) {
   .p-signup {
-    display: flex;
     justify-content: center;
     align-items: center;
   }
 }
 
-@media screen and (min-width: 992px) {
-  .p-signup__img-wrap {
-    width: 30%;
-  }
+.p-signup__img-wrap {
+  display: none;
 }
 
 @media screen and (min-width: 992px) {
-  .p-signup__form {
+  .p-signup__img-wrap {
+    display: initial;
     width: 30%;
   }
 }
@@ -614,18 +633,46 @@ button {
 
 #p-input-username {
   position: relative;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  #p-input-username {
+    margin-bottom: 40px;
+  }
 }
 
 #p-input-email {
   position: relative;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  #p-input-email {
+    margin-bottom: 40px;
+  }
 }
 
 #p-input-password {
   position: relative;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  #p-input-password {
+    margin-bottom: 40px;
+  }
 }
 
 #p-input-password-re {
   position: relative;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  #p-input-password-re {
+    margin-bottom: 40px;
+  }
 }
 
 .u-mg--auto {

@@ -1,19 +1,37 @@
 @use "../../foundation/mixin";
+@use "../../foundation/variable" as var;
 
 #p-input {
     &-username {
         position: relative;
+        margin-bottom: var.$space_l;
+        // pcデザイン
+        @include mixin.mq(lg) {
+            margin-bottom: var.$space_3l;
+        }
     }
     &-email {
         position: relative;
+        margin-bottom: var.$space_l;
+        // pcデザイン
+        @include mixin.mq(lg) {
+            margin-bottom: var.$space_3l;
+        }
     }
     &-password {
         position: relative;
+        margin-bottom: var.$space_l;
+        // pcデザイン
+        @include mixin.mq(lg) {
+            margin-bottom: var.$space_3l;
+        }
         &-re {
             position: relative;
+            margin-bottom: var.$space_l;
+            // pcデザイン
+            @include mixin.mq(lg) {
+                margin-bottom: var.$space_3l;
+            }
         }
-    }
-    // pc画面
-    @include mixin.mq(lg) {
     }
 }
