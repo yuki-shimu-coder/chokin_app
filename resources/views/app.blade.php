@@ -38,7 +38,8 @@
     @yield('content')
   </main>
 
-  <footer class="l-footer"></footer>
+  <footer id="l-footer"></footer>
+  <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
 </html>

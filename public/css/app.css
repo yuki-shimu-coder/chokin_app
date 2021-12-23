@@ -453,14 +453,14 @@ button {
   margin: 40px 0;
 }
 
-.l-footer {
+#l-footer {
   height: 60px;
   background-color: #454545;
   width: 100%;
   color: #fff;
 }
 
-.l-footer a {
+#l-footer a {
   color: #fff;
 }
 
