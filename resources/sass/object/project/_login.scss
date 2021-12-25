@@ -2,9 +2,9 @@
 @use "../../foundation/mixin";
 
 // ==================================
-// p-signup
+// p-login
 // ==================================
-.p-signup {
+.p-login {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -14,15 +14,9 @@
         align-items: center;
     }
 
-    &__img-wrap {
-        // スマホデザイン
-        display: none;
-
-        // pcデザイン
-        @include mixin.mq(lg) {
-            display: initial;
-            width: 30%;
-        }
+    &__title {
+        font-weight: initial;
+        font-size: 20px;
     }
 
     &__form {
@@ -40,19 +34,19 @@
         @include mixin.mq(xl) {
             width: 30%;
         }
-    }
-
-    &__title {
-        font-weight: initial;
-        font-size: 20px;
-    }
-    
-    p {
-        // pcデザイン
-        @include mixin.mq(lg) {
-            font-size: 20px;
+        &-check {
+            margin-bottom: var.$space_xl;
+            display: flex;
+            justify-content: start;
+            align-items: center;
         }
     }
+    &__password-re {
+        text-align: end;
+        font-size: var.$font-size_s;
+        margin-bottom: var.$space_xl;
+    }
+
     &__button {
         width: 200px;
         height: 50px;

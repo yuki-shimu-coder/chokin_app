@@ -400,13 +400,13 @@ a {
 }
 
 a {
-  color: #777;
+  color: #454545;
   text-decoration: none;
   transition: 0.3s;
 }
 
 a:hover {
-  color: #e3a8b1;
+  color: #1c81b8;
   transition: 0.3s;
 }
 
@@ -647,6 +647,11 @@ button {
   }
 }
 
+.p-signup__title {
+  font-weight: initial;
+  font-size: 20px;
+}
+
 @media screen and (min-width: 992px) {
   .p-signup p {
     font-size: 20px;
@@ -667,6 +672,73 @@ button {
   background: rgba(121, 161, 212, 0.7);
 }
 
+.p-login {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 992px) {
+  .p-login {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.p-login__title {
+  font-weight: initial;
+  font-size: 20px;
+}
+
+.p-login__form {
+  width: 75%;
+}
+
+@media screen and (min-width: 768px) {
+  .p-login__form {
+    width: 55%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .p-login__form {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .p-login__form {
+    width: 30%;
+  }
+}
+
+.p-login__form-check {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.p-login__password-re {
+  text-align: end;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.p-login__button {
+  width: 200px;
+  height: 50px;
+  font-size: 24px;
+  background: #79a1d4;
+  color: #fff;
+  transition: 0.3s all;
+}
+
+.p-login__button:hover {
+  cursor: pointer;
+  background: rgba(121, 161, 212, 0.7);
+}
+
 #p-input-username {
   position: relative;
   margin-bottom: 15px;
@@ -674,7 +746,7 @@ button {
 
 @media screen and (min-width: 992px) {
   #p-input-username {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }
 
@@ -685,7 +757,7 @@ button {
 
 @media screen and (min-width: 992px) {
   #p-input-email {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }
 
@@ -696,7 +768,7 @@ button {
 
 @media screen and (min-width: 992px) {
   #p-input-password {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }
 
@@ -707,7 +779,7 @@ button {
 
 @media screen and (min-width: 992px) {
   #p-input-password-re {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }
 
@@ -717,6 +789,10 @@ button {
 
 .u-mgb--40 {
   margin-bottom: 40px;
+}
+
+.u-mgr--10 {
+  margin-right: 10px;
 }
 
 .u-mgr--60 {

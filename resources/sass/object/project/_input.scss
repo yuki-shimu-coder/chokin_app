@@ -7,7 +7,7 @@
         margin-bottom: var.$space_l;
         // pcデザイン
         @include mixin.mq(lg) {
-            margin-bottom: var.$space_3l;
+            margin-bottom: var.$space_xl;
         }
     }
     &-email {
@@ -15,7 +15,7 @@
         margin-bottom: var.$space_l;
         // pcデザイン
         @include mixin.mq(lg) {
-            margin-bottom: var.$space_3l;
+            margin-bottom: var.$space_xl;
         }
     }
     &-password {
@@ -23,14 +23,14 @@
         margin-bottom: var.$space_l;
         // pcデザイン
         @include mixin.mq(lg) {
-            margin-bottom: var.$space_3l;
+            margin-bottom: var.$space_xl;
         }
         &-re {
             position: relative;
             margin-bottom: var.$space_l;
             // pcデザイン
             @include mixin.mq(lg) {
-                margin-bottom: var.$space_3l;
+                margin-bottom: var.$space_xl;
             }
         }
     }

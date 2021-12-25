@@ -10,7 +10,7 @@
       <p>超勤をかんたん管理</p>
     </div>
     <div class="p-signup__form">
-      <p class="u-mgb--40">ユーザー登録</p>
+      <h1 class="p-signup__title u-mgb--40">ユーザー登録</h1>
       <form action="" method="POST">
         <div id="p-input-username">
           <i class="fas fa-user c-input-icon"></i>
@@ -28,7 +28,7 @@
           <i class="fas fa-lock c-input-icon"></i>
           <input type="password" class="c-auth-input" placeholder="もう一度パスワードを入力してください">
         </div>
-        <button type="submit" class="c-button p-signup__button">Sign Up</button>
+        <button type="submit" class="c-button p-signup__button">SIGN UP</button>
       </form>
     </div>
   </div>
