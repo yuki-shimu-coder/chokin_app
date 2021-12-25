@@ -496,13 +496,21 @@ button {
 }
 
 .c-auth-input {
-  width: 400px;
+  width: 100%;
   height: 50px;
-  padding: 10px 20px 10px 60px;
-  font-size: 14px;
+  padding: 10px;
+  padding-left: 45px;
+  font-size: 12px;
   border-radius: 100px;
   display: block;
   background: #abcae8;
+}
+
+@media screen and (min-width: 768px) {
+  .c-auth-input {
+    font-size: 14px;
+    padding: 10px 20px 10px 60px;
+  }
 }
 
 .c-button {
@@ -514,9 +522,15 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 15px 25px;
-  font-size: 20px;
+  padding: 15px;
+  font-size: 18px;
   color: #454545;
+}
+
+@media screen and (min-width: 768px) {
+  .c-input-icon {
+    padding: 15px 25px;
+  }
 }
 
 .p-header {
@@ -607,6 +621,28 @@ button {
 @media screen and (min-width: 992px) {
   .p-signup__img-wrap {
     display: initial;
+    width: 30%;
+  }
+}
+
+.p-signup__form {
+  width: 75%;
+}
+
+@media screen and (min-width: 768px) {
+  .p-signup__form {
+    width: 55%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .p-signup__form {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .p-signup__form {
     width: 30%;
   }
 }

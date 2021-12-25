@@ -1,8 +1,16 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variable" as var;
+
 .c-input-icon {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 15px 25px;
-    font-size: 20px;
+    padding: 15px;
+    font-size: var.$font-size_l;
     color: #454545;
+
+    // タブレットデザイン以降
+    @include mixin.mq(md) {
+        padding: 15px 25px;
+    }
 }

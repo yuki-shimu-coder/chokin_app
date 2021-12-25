@@ -26,9 +26,19 @@
     }
 
     &__form {
+        // スマホデザイン
+        width: 75%;
+        // タブレットデザイン
+        @include mixin.mq(md) {
+            width: 55%;
+        }
         // pcデザイン
         @include mixin.mq(lg) {
-
+            width: 40%;
+        }
+        // pc大デザイン
+        @include mixin.mq(xl) {
+            width: 30%;
         }
     }
     p {
