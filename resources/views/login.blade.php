@@ -1,5 +1,7 @@
 @extends('app')
 
+@section('title','ログイン画面')
+
 @section('content')
 <div class="l-container">
   <div class="p-login">

@@ -1,5 +1,7 @@
 @extends('app')
 
+@section('title','新規登録')
+
 @section('content')
 <div class="l-container">
   <div class="p-signup">
