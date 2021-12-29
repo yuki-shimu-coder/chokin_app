@@ -9,15 +9,15 @@
       <h1 class="p-record__title u-mgb--40">超勤記録画面</h1>
       <form action="">
         {{-- 申請日 --}}
-        <div class="p-record__date">
+        <section class="p-record__date">
           <p class="p-record__head"><i class="fas fa-calendar-alt u-mgr--10"></i>申請日</p>
           <div class="p-record__body">
             <input type="date" name="" id="">
           </div>
-        </div>
+        </section>
 
         {{-- 申請時間 --}}
-        <div class="p-record__time">
+        <section class="p-record__time">
           <p class="p-record__head"><i class="fas fa-clock u-mgr--10"></i>申請時間</p>
 
           <div class="p-record__body">
@@ -88,15 +88,15 @@
           </div>
 
 
-        </div>
+        </section>
 
         {{-- 超勤理由 --}}
-        <div class="p-record__reason">
+        <section class="p-record__reason">
           <p class="p-record__head"><i class="fas fa-desktop u-mgr--10"></i>超勤理由</p>
           <div class="p-record__body">
             <textarea name="" id="" rows="3" placeholder="超勤理由を入力してください" class="p-record__reason-text"></textarea>
           </div>
-        </div>
+        </section>
 
         {{-- 超勤記録ボタン --}}
         <button type="submit" class="c-button p-record__btn">記録する</button>
