@@ -31,6 +31,6 @@ Route::get('record', function () {
 });
 
 // 超勤状況確認ページ
-Route::get('status', function () {
-    return view('status');
+Route::get('workstatus', function () {
+    return view('workstatus');
 });

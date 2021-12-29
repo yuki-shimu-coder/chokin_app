@@ -1015,6 +1015,15 @@ h1 {
   background: rgba(121, 161, 212, 0.7);
 }
 
+.p-work-status {
+  text-align: center;
+}
+
+.p-work-status__title {
+  font-weight: initial;
+  font-size: 20px;
+}
+
 .u-mg--auto {
   margin: 0 auto;
 }

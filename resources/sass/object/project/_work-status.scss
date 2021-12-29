@@ -1,0 +1,10 @@
+@use "../../foundation/variable" as var;
+@use "../../foundation/mixin";
+
+.p-work-status {
+    text-align: center;
+    &__title {
+        font-weight: initial;
+        font-size: 20px;
+    }
+}
