@@ -1,0 +1,141 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variable" as var;
+
+.p-record {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    & input[type="date"] {
+        padding: 5px;
+    }
+    &__title {
+        font-weight: initial;
+        font-size: 20px;
+    }
+    &__head {
+        background: #79a1d4;
+        border-radius: 3px 3px 0 0;
+        color: #fff;
+        padding: 10px 20px;
+        font-weight: bold;
+        text-align: left;
+        // box-shadow: 0px 0px 30px -5px rgba(0, 0, 0, 0.6);
+    }
+    &__body {
+        padding: 20px;
+        background: #fff;
+        border-radius: 0 0 3px 3px;
+        text-align: left;
+        // box-shadow: 0px 0px 30px -5px rgba(0, 0, 0, 0.6);
+    }
+    &__date {
+    }
+
+    &__time {
+        margin-top: var.$space_3l;
+        &-select {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-top: var.$space_m;
+            @include mixin.mq(lg) {
+                flex-direction: row;
+            }
+            & select {
+                padding: 5px;
+            }
+        }
+        &-start,
+        &-end {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        &-end {
+            margin-top: var.$space_m;
+            @include mixin.mq(lg) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__multiplier {
+        &-wrap {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-bottom: var.$space_xxl;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            // pcデザイン
+            @include mixin.mq(lg) {
+            }
+        }
+        &-label {
+            // スマホ xs
+            width: 100%;
+            border: none;
+            text-align: center;
+            margin-bottom: var.$space_m;
+            box-sizing: border-box;
+            border-radius: 3px;
+            padding: 5px;
+            color: #fff;
+            font-size: 12px;
+
+            // pcデザイン
+            @include mixin.mq(lg) {
+                height: 30px;
+                margin-bottom: 0;
+                width: 20%;
+            }
+
+            &.--weekday {
+                background: green;
+            }
+            &.--holiday {
+                background: coral;
+            }
+            &.--midnight {
+                background: rgb(134, 30, 182);
+            }
+        }
+    }
+
+    &__reason {
+        margin-top: var.$space_3l;
+        &-text {
+            width: 100%;
+        }
+    }
+    &__form {
+        // スマホデザイン
+        width: 69%;
+        // タブレットデザイン
+        @include mixin.mq(md) {
+            width: 52%;
+        }
+        // pcデザイン
+        @include mixin.mq(lg) {
+            width: 45%;
+        }
+        // pc大デザイン
+        @include mixin.mq(xl) {
+            width: 36%;
+        }
+    }
+    &__btn {
+        width: 200px;
+        height: 50px;
+        font-size: 24px;
+        background: var.$palette-navy;
+        color: #fff;
+        transition: 0.3s all;
+        margin-top: var.$space_3l;
+        &:hover {
+            cursor: pointer;
+            background: rgba(121, 161, 212, 0.7);
+        }
+    }
+}

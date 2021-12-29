@@ -6,7 +6,7 @@
 // ==================================
 #l-footer {
     height: var.$header-height;
-    background-color: rgba(69, 69, 69);
+    background-color: var.$color-globalFooter-background;
     width: 100%;
     color: #fff;
     & a {

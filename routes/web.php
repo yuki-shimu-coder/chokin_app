@@ -15,10 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('signup',function(){
+// 新規登録画面
+Route::get('signup', function () {
     return view('signup');
 });
 
-Route::get('login',function(){
+// ログイン画面
+Route::get('login', function () {
     return view('login');
+});
+
+// 超勤時間記録画面
+Route::get('record', function () {
+    return view('worktime-record');
 });

@@ -8,7 +8,7 @@
     height: var.$header-height;
     top: 0;
     left: 0;
-    background-color: rgba(69, 69, 69);
+    background-color: var.$color-globalHeader-background;
     width: 100%;
     color: #fff;
     & a {

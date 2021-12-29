@@ -10,6 +10,11 @@
         }
     }
     &r {
+        &l {
+            &--10 {
+                margin: 0 10px;
+            }
+        }
         &--10 {
             margin-right: 10px;
         }

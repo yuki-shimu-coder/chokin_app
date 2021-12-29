@@ -10,6 +10,7 @@
     border-radius: 100px;
     display: block;
     background: rgba(171, 202, 232, 1);
+    border: 1px solid var.$palette-navy;
 
     // タブレット以降
     @include mixin.mq(md) {

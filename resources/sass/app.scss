@@ -49,6 +49,12 @@
 // インプットエリアにフォントアイコンを重ねる
 @use "object/component/input-icon";
 
+// セレクトボックス
+@use "object/component/select-box";
+
+// カード
+@use "object/component/card";
+
 // ==============================
 // project
 // ==============================
@@ -60,9 +66,15 @@
 @use "object/project/login";
 // input
 @use "object/project/input";
+// record
+@use "object/project/record";
 
 // ==============================
 // utility
 // ==============================
 // margin
 @use "object/utility/margin";
+// bgcolor
+@use "object/utility/bg-color";
+// border
+@use "object/utility/border";

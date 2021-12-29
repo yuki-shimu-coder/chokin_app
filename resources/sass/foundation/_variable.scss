@@ -1,6 +1,16 @@
 // ==============================
 // 変数
 // ==============================
+
+// カラーパレット
+$palette-navy: rgba(7, 37, 77, 1);
+
+// header-bgcolor
+$color-globalHeader-background: $palette-navy;
+
+// footer-bgcolor
+$color-globalFooter-background: $palette-navy;
+
 $font-color_default: #777;
 $font-color_date: #e37b89; // TODO:リファクタ必要
 $color_corp: #1c81b8;
