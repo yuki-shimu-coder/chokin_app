@@ -8,7 +8,12 @@
     <h1 class="p-work-status__title">〇〇さんの超勤状況</h1>
     {{-- 超勤状況一覧 --}}
     <section class="p-work-status__history">
-      
+      <div class="p-work-status__history-head">
+
+      </div>
+      <div class="p-work-status__history-body">
+
+      </div>
 
     </section>
 

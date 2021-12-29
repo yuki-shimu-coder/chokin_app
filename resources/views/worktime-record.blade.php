@@ -10,7 +10,7 @@
       <form action="">
         {{-- 申請日 --}}
         <section class="p-record__date">
-          <p class="p-record__head"><i class="fas fa-calendar-alt u-mgr--10"></i>申請日</p>
+          <div class="p-record__head"><i class="fas fa-calendar-alt u-mgr--10"></i>申請日</div>
           <div class="p-record__body">
             <input type="date" name="" id="">
           </div>
@@ -18,7 +18,7 @@
 
         {{-- 申請時間 --}}
         <section class="p-record__time">
-          <p class="p-record__head"><i class="fas fa-clock u-mgr--10"></i>申請時間</p>
+          <div class="p-record__head"><i class="fas fa-clock u-mgr--10"></i>申請時間</div>
 
           <div class="p-record__body">
 
@@ -92,7 +92,7 @@
 
         {{-- 超勤理由 --}}
         <section class="p-record__reason">
-          <p class="p-record__head"><i class="fas fa-desktop u-mgr--10"></i>超勤理由</p>
+          <div class="p-record__head"><i class="fas fa-desktop u-mgr--10"></i>超勤理由</div>
           <div class="p-record__body">
             <textarea name="" id="" rows="3" placeholder="超勤理由を入力してください" class="p-record__reason-text"></textarea>
           </div>
