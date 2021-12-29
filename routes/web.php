@@ -29,3 +29,8 @@ Route::get('login', function () {
 Route::get('record', function () {
     return view('worktime-record');
 });
+
+// 超勤状況確認ページ
+Route::get('status', function () {
+    return view('status');
+});
