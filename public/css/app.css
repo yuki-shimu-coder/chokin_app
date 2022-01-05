@@ -1140,6 +1140,76 @@ h1 {
   right: 5px;
 }
 
+.p-profile {
+  max-width: 90%;
+  display: grid;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 40px;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 992px) {
+  .p-profile {
+    max-width: 100%;
+    grid-template-columns: 1fr 1.25fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .p-profile {
+    max-width: 80%;
+  }
+}
+
+.p-profile__side {
+  background: #fff;
+  border-radius: 3px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.p-profile__list-item {
+  border-bottom: dotted 1px #777;
+}
+
+.p-profile__list-item a {
+  padding: 10px 20px;
+  display: block;
+}
+
+.p-profile__list-item:last-child {
+  border-bottom: none;
+}
+
+.p-profile__title {
+  font-weight: initial;
+  font-size: 20px;
+  text-align: center;
+}
+
+.p-profile__btn {
+  width: 200px;
+  height: 50px;
+  font-size: 24px;
+  background: #07254d;
+  color: #fff;
+  margin: 30px auto 0;
+  display: block;
+}
+
+.p-profile__btn:hover {
+  background: rgba(121, 161, 212, 0.7);
+}
+
+.p-profile__main {
+  background: #fff;
+  padding: 50px 40px;
+  border-radius: 3px;
+}
+
 .u-mg--auto {
   margin: 0 auto;
 }

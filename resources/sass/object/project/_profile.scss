@@ -1,4 +1,67 @@
 @use "../../foundation/variable" as var;
 @use "../../foundation/mixin";
 
+.p-profile {
+    // 共通デザイン
+    max-width: 90%;
+    display: grid;
+    column-gap: 40px;
+    row-gap: 40px;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    
+    // pc(小)デザイン
+    @include mixin.mq(lg) {
+        max-width: 100%;
+        grid-template-columns: 1fr 1.25fr;
+    }
 
+    // pc(大)デザイン
+    @include mixin.mq(xl) {
+        max-width: 80%;
+    }
+
+    &__side {
+        background: #fff;
+        border-radius: 3px;
+        height: fit-content;
+    }
+
+    &__list-item {
+        border-bottom: dotted 1px #777;
+
+        a {
+            padding: 10px 20px;
+            display: block;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    &__title {
+        font-weight: initial;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    &__btn {
+        width: 200px;
+        height: 50px;
+        font-size: var.$font-size_xl;
+        background: var.$palette-navy;
+        color: #fff;
+        margin: var.$space_xxl auto 0;
+        display: block;
+        &:hover {
+            background: rgba(121, 161, 212, 0.7);
+        }
+    }
+
+    &__main {
+        background: #fff;
+        padding: 50px 40px;
+        border-radius: 3px;
+    }
+}
