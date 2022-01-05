@@ -1,7 +1,7 @@
 @use "../../foundation/mixin";
 @use "../../foundation/variable" as var;
 
-#p-input {
+#c-input {
     &-username {
         position: relative;
         margin-bottom: var.$space_l;

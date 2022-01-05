@@ -520,6 +520,50 @@ h1 {
   }
 }
 
+#c-input-username {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  #c-input-username {
+    margin-bottom: 20px;
+  }
+}
+
+#c-input-email {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  #c-input-email {
+    margin-bottom: 20px;
+  }
+}
+
+#c-input-password {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  #c-input-password {
+    margin-bottom: 20px;
+  }
+}
+
+#c-input-password-re {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  #c-input-password-re {
+    margin-bottom: 20px;
+  }
+}
+
 .c-button {
   padding: 10px 20px;
   border-radius: 100px;
@@ -828,50 +872,6 @@ h1 {
 .p-login__button:hover {
   cursor: pointer;
   background: rgba(121, 161, 212, 0.7);
-}
-
-#p-input-username {
-  position: relative;
-  margin-bottom: 15px;
-}
-
-@media screen and (min-width: 992px) {
-  #p-input-username {
-    margin-bottom: 20px;
-  }
-}
-
-#p-input-email {
-  position: relative;
-  margin-bottom: 15px;
-}
-
-@media screen and (min-width: 992px) {
-  #p-input-email {
-    margin-bottom: 20px;
-  }
-}
-
-#p-input-password {
-  position: relative;
-  margin-bottom: 15px;
-}
-
-@media screen and (min-width: 992px) {
-  #p-input-password {
-    margin-bottom: 20px;
-  }
-}
-
-#p-input-password-re {
-  position: relative;
-  margin-bottom: 15px;
-}
-
-@media screen and (min-width: 992px) {
-  #p-input-password-re {
-    margin-bottom: 20px;
-  }
 }
 
 .p-record {

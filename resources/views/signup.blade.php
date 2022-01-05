@@ -14,19 +14,19 @@
     <div class="p-signup__form">
       <h1 class="p-signup__title u-mgb--40">ユーザー登録</h1>
       <form action="" method="POST">
-        <div id="p-input-username">
+        <div id="c-input-username">
           <i class="fas fa-user c-input-icon"></i>
           <input type="text" class="c-auth-input" placeholder="名前を入力してください">
         </div>
-        <div id="p-input-email">
+        <div id="c-input-email">
           <i class="fas fa-envelope c-input-icon"></i>
           <input type="text" class="c-auth-input" placeholder="Emailアドレスを入力してください">
         </div>
-        <div id="p-input-password">
+        <div id="c-input-password">
           <i class="fas fa-lock c-input-icon"></i>
           <input type="password" class="c-auth-input" placeholder="パスワードを入力してください">
         </div>
-        <div id="p-input-password-re">
+        <div id="c-input-password-re">
           <i class="fas fa-lock c-input-icon"></i>
           <input type="password" class="c-auth-input" placeholder="もう一度パスワードを入力してください">
         </div>

@@ -8,11 +8,11 @@
     <div class="p-login__form">
       <h1 class="p-login__title u-mgb--40">ログイン</h1>
       <form action="" method="POST">
-        <div id="p-input-email">
+        <div id="c-input-email">
           <i class="fas fa-envelope c-input-icon"></i>
           <input type="text" class="c-auth-input" placeholder="Emailアドレスを入力してください">
         </div>
-        <div id="p-input-password">
+        <div id="c-input-password">
           <i class="fas fa-lock c-input-icon"></i>
           <input type="password" class="c-auth-input" placeholder="パスワードを入力してください">
         </div>

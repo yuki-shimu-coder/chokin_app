@@ -44,6 +44,9 @@
 // 新規登録・ログイン画面の入力エリア
 @use "object/component/auth-input";
 
+// input
+@use "object/component/input";
+
 // ボタン
 @use "object/component/button";
 
@@ -68,9 +71,6 @@
 
 // login
 @use "object/project/login";
-
-// input
-@use "object/project/input";
 
 // record
 @use "object/project/record";
