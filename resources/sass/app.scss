@@ -37,6 +37,7 @@
 // ==============================
 // component
 // ==============================
+
 // haaderメニューボタン
 @use "object/component/menu-trigger";
 
@@ -58,18 +59,27 @@
 // ==============================
 // project
 // ==============================
+
 // header
 @use "object/project/p-header";
+
 // signup
 @use "object/project/signup";
+
 // login
 @use "object/project/login";
+
 // input
 @use "object/project/input";
+
 // record
 @use "object/project/record";
+
 // workstatus
 @use "object/project/work-status";
+
+// profile-edit
+@use "object/project/profile";
 
 // ==============================
 // utility
