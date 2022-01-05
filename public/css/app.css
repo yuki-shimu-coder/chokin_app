@@ -1060,7 +1060,6 @@ h1 {
   background: #fff;
   border-radius: 0 0 3px 3px;
   text-align: left;
-  overflow: scroll;
 }
 
 .p-work-status__history-contents {
