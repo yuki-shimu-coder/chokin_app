@@ -34,3 +34,8 @@ Route::get('record', function () {
 Route::get('workstatus', function () {
     return view('workstatus');
 });
+
+// プロフィール編集画面
+Route::get('profile', function () {
+    return view('profile-edit');
+});
