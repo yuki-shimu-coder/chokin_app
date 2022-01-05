@@ -1,11 +1,9 @@
 @use "../../foundation/variable" as var;
 
 .c-card {
-    &-time {
-        font-size: var.$font-size_s;
-        border-radius: 3px;
-        text-align: center;
-        padding: 2px 6px;
-        background: #9cc1f1;
-    }
+    font-size: var.$font-size_s;
+    border-radius: 3px;
+    text-align: center;
+    padding: 2px 6px;
+    background: #9cc1f1;
 }

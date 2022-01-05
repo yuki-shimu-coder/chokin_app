@@ -3,4 +3,18 @@
 .c-button {
     padding: 10px 20px;
     border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s;
+    &.--edit {
+        padding: 5px 10px;
+        background: yellow;
+    }
+    &.--delete {
+        padding: 5px 10px;
+        background: red;
+        color: #fff;
+        &:hover {
+            color: var.$palette-navy;
+        }
+    }
 }

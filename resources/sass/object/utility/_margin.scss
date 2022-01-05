@@ -5,8 +5,11 @@
         margin: 0 auto;
     }
     &b {
+        &--10{
+            margin: 10px;
+        }
         &--40 {
-            margin-bottom: var.$space_3l;
+            margin-bottom: 40px;
         }
     }
     &r {
@@ -17,6 +20,9 @@
         }
         &--10 {
             margin-right: 10px;
+        }
+        &--20 {
+            margin-right: 20px;
         }
 
         &--60 {

@@ -29,13 +29,13 @@
               </div>
               <div class="p-record__time-select">
                 <div class="p-record__time-start">
-                  <div class="c-card-time u-mgr--10">開始</div>
+                  <div class="c-card u-mgr--10">開始</div>
                   <select name="" id="" class="c-cp_ipselect c-cp_sl02">
                     <option value="">××時××分</option>
                   </select>
                 </div>
                 <div class="p-record__time-end">
-                  <div class="c-card-time u-mgr--10">終了</div>
+                  <div class="c-card u-mgr--10">終了</div>
                   <select name="" id="" class="c-cp_ipselect c-cp_sl02">
                     <option value="">××時××分</option>
                   </select>
@@ -50,13 +50,13 @@
               </div>
               <div class="p-record__time-select">
                 <div class="p-record__time-start">
-                  <div class="c-card-time u-mgr--10">開始</div>
+                  <div class="c-card u-mgr--10">開始</div>
                   <select name="" id="" class="c-cp_ipselect c-cp_sl02">
                     <option value="">××時××分</option>
                   </select>
                 </div>
                 <div class="p-record__time-end">
-                  <div class="c-card-time u-mgr--10">終了</div>
+                  <div class="c-card u-mgr--10">終了</div>
                   <select name="" id="" class="c-cp_ipselect c-cp_sl02">
                     <option value="">××時××分</option>
                   </select>
@@ -71,13 +71,13 @@
               </div>
               <div class="p-record__time-select">
                 <div class="p-record__time-start">
-                  <div class="c-card-time u-mgr--10">開始</div>
+                  <div class="c-card u-mgr--10">開始</div>
                   <select name="" id="" class="c-cp_ipselect c-cp_sl02">
                     <option value="">××時××分</option>
                   </select>
                 </div>
                 <div class="p-record__time-end">
-                  <div class="c-card-time u-mgr--10">終了</div>
+                  <div class="c-card u-mgr--10">終了</div>
                   <select name="" id="" class="c-cp_ipselect c-cp_sl02">
                     <option value="">××時××分</option>
                   </select>
