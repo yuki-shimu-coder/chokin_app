@@ -9,7 +9,7 @@
     row-gap: 40px;
     margin: 0 auto;
     grid-template-columns: 1fr;
-    
+
     // pc(小)デザイン
     @include mixin.mq(lg) {
         max-width: 100%;
@@ -47,9 +47,8 @@
     }
 
     &__btn {
-        width: 200px;
         height: 50px;
-        font-size: var.$font-size_xl;
+        font-size: var.$font-size_m;
         background: var.$palette-navy;
         color: #fff;
         margin: var.$space_xxl auto 0;

@@ -20,24 +20,24 @@
     <div class="p-profile__main">
       <h1 class="p-profile__title u-mgb--40">パスワード編集</h1>
       <form action="" method="POST">
-        <label for="username">ユーザーネーム</label>
+        <label for="oldPass">現在のパスワード</label>
         <div id="c-input-username">
-          <i class="fas fa-user c-input-icon"></i>
-          <input type="text" class="c-auth-input" placeholder="名前を入力してください" id="username">
+          <i class="fas fa-lock c-input-icon"></i>
+          <input type="text" class="c-auth-input" placeholder="現在のパスワードを入力してください" id="oldPass">
         </div>
 
-        <label for="email">メールアドレス</label>
+        <label for="newPass">新しいパスワード</label>
         <div id="c-input-email">
-          <i class="fas fa-envelope c-input-icon"></i>
-          <input type="text" class="c-auth-input" placeholder="Emailアドレスを入力してください" id="email">
+          <i class="fas fa-lock c-input-icon"></i>
+          <input type="text" class="c-auth-input" placeholder="新しいパスワードを入力してください" id="newPass">
         </div>
 
-        <label for="group">所属課</label>
+        <label for="newPass-re">新しいパスワード（再入力）</label>
         <div id="c-input-password">
-          <i class="fas fa-address-card c-input-icon"></i>
-          <input type="text" class="c-auth-input" placeholder="所属課を入力してください" id="group">
+          <i class="fas fa-lock c-input-icon"></i>
+          <input type="text" class="c-auth-input" placeholder="再入力してください" id="newPass-re">
         </div>
-        <button type="submit" class="c-button p-profile__btn">更新する</button>
+        <button type="submit" class="c-button p-profile__btn">パスワードを変更する</button>
       </form>
 
     </div>

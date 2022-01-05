@@ -39,3 +39,8 @@ Route::get('workstatus', function () {
 Route::get('profile', function () {
     return view('profile-edit');
 });
+
+// パスワード編集画面
+Route::get('password', function () {
+    return view('profile-pass');
+});
