@@ -32,10 +32,10 @@
           <input type="text" class="c-auth-input" placeholder="Emailアドレスを入力してください" id="email">
         </div>
 
-        <label for="group">所属課</label>
+        <label for="team">所属課</label>
         <div id="c-input-password">
           <i class="fas fa-address-card c-input-icon"></i>
-          <input type="text" class="c-auth-input" placeholder="所属課を入力してください" id="group">
+          <input type="text" class="c-auth-input" placeholder="所属課を入力してください" id="team">
         </div>
         <button type="submit" class="c-button p-profile__btn">更新する</button>
       </form>
