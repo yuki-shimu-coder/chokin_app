@@ -14,7 +14,12 @@ class AddTeamIdToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            //team_idカラムを追加する
+            $table->unsignedBigInteger('team_id');
+            // 外部キー制約の設定
+            $table->foreign('team_id')        // foreignメソッドでteam_idを外部キーに設定する。
+                ->references('id')            // referencesメソッドで、従テーブルのteam_idと紐付いている主テーブルのidを指定する。
+                ->on('teams');
         });
     }
 
