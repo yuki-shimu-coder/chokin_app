@@ -14,7 +14,8 @@ class AddDeletedAtToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            //deleted_atカラムを追加する。このカラムは、ソフトデリート（論理削除）用として活用される。
+            $table->softDeletes();
         });
     }
 
@@ -26,7 +27,8 @@ class AddDeletedAtToUsers extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            //deleted_atカラムのドロップ
+            $table->dropSoftDeletes();
         });
     }
 }
