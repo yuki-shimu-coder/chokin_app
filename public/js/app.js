@@ -49775,6 +49775,8 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./footer_fixed */ "./resources/js/footer_fixed.js");
+
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
  * The following block of code may be used to automatically register your
@@ -49806,7 +49808,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This
@@ -49815,7 +49817,7 @@ window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 
 try {
   window.Popper = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")["default"];
-  window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+  window.$ = __webpack_provided_window_dot_jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
   __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
 } catch (e) {}
@@ -49841,6 +49843,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 
@@ -49913,6 +49916,28 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/footer_fixed.js":
+/*!**************************************!*\
+  !*** ./resources/js/footer_fixed.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {$(function () {
+  //フッターを最下部に固定
+  var $footer = $('#l-footer');
+  console.log($footer);
+
+  if (window.innerHeight > $footer.offset().top + $footer.outerHeight()) {
+    $footer.attr({
+      'style': 'position:fixed; top:' + (window.innerHeight - $footer.outerHeight()) + 'px;'
+    });
+  }
+});
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -49920,7 +49945,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: @use rules must be written before any other rules.\n   ╷\n15 │ @use \"foundation/normalize\";\n   │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n   ╵\n  /Applications/MAMP/htdocs/chokin_app/resources/sass/app.scss 15:1  root stylesheet\n    at /Applications/MAMP/htdocs/chokin_app/node_modules/webpack/lib/NormalModule.js:316:20\n    at /Applications/MAMP/htdocs/chokin_app/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Applications/MAMP/htdocs/chokin_app/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at context.callback (/Applications/MAMP/htdocs/chokin_app/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at /Applications/MAMP/htdocs/chokin_app/node_modules/sass-loader/dist/index.js:73:7\n    at Function.call$2 (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:98996:16)\n    at render_closure1.call$2 (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:84511:12)\n    at _RootZone.runBinary$3$3 (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:29540:18)\n    at _FutureListener.handleError$1 (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:28062:21)\n    at _Future__propagateToListeners_handleError.call$0 (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:28369:49)\n    at Object._Future__propagateToListeners (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:3901:77)\n    at _Future._completeError$2 (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:28215:9)\n    at _AsyncAwaitCompleter.completeError$2 (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:27863:12)\n    at Object._asyncRethrow (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:3704:17)\n    at /Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:19766:20\n    at _wrapJsFunctionForAsync_closure.$protected (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:3729:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:27882:12)\n    at _awaitOnObject_closure0.call$2 (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:27876:25)\n    at _RootZone.runBinary$3$3 (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:29540:18)\n    at _FutureListener.handleError$1 (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:28062:21)\n    at _Future__propagateToListeners_handleError.call$0 (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:28369:49)\n    at Object._Future__propagateToListeners (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:3901:77)\n    at _Future._completeError$2 (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:28215:9)\n    at _Future__asyncCompleteError_closure.call$0 (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:28299:18)\n    at Object._microtaskLoop (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:3957:24)\n    at StaticClosure._startMicrotaskLoop (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:3963:11)\n    at _AsyncRun__scheduleImmediateJsOverride_internalCallback.call$0 (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:27783:21)\n    at invokeClosure (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:1447:26)\n    at Immediate.<anonymous> (/Applications/MAMP/htdocs/chokin_app/node_modules/sass/sass.dart.js:1468:18)\n    at processImmediate (node:internal/timers:464:21)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 

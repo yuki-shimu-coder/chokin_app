@@ -5,6 +5,7 @@
  */
 
 require('./bootstrap');
+require('./footer_fixed');
 
 window.Vue = require('vue');
 
