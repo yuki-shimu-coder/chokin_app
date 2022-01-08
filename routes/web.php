@@ -44,3 +44,7 @@ Route::get('profile', function () {
 Route::get('password', function () {
     return view('profile-pass');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
