@@ -1,8 +1,104 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+
+// ***************************************************************
+// foundation
+// ***************************************************************
+
+// normalize
+@use "foundation/normalize";
+
+// 変数
+@use "foundation/variable";
+
+// base
+@use "foundation/base";
+
+// mixin
+@use "foundation/mixin";
+
+// ***************************************************************
+// layout
+// ***************************************************************
+
+// header
+@use "layout/l-header";
+
+// contatier
+@use "layout/container";
+
+// main
+@use "layout/main";
+
+// footer
+@use "layout/footer";
+
+// ***************************************************************
+// object
+// ***************************************************************
+
+// ==============================
+// component
+// ==============================
+
+// haaderメニューボタン
+@use "object/component/menu-trigger";
+
+// 新規登録・ログイン画面の入力エリア
+@use "object/component/auth-input";
+
+// input
+@use "object/component/input";
+
+// ボタン
+@use "object/component/button";
+
+// インプットエリアにフォントアイコンを重ねる
+@use "object/component/input-icon";
+
+// セレクトボックス
+@use "object/component/select-box";
+
+// カード
+@use "object/component/card";
+
+// ==============================
+// project
+// ==============================
+
+// header
+@use "object/project/p-header";
+
+// signup
+@use "object/project/signup";
+
+// login
+@use "object/project/login";
+
+// record
+@use "object/project/record";
+
+// workstatus
+@use "object/project/work-status";
+
+// profile-edit
+@use "object/project/profile";
+
+// ==============================
+// utility
+// ==============================
+
+// margin
+@use "object/utility/margin";
+
+// bgcolor
+@use "object/utility/bg-color";
+
+// border
+@use "object/utility/border";
