@@ -81,10 +81,11 @@
                             <div class="col-md-6">
 
                                 <select name="team_id" id="BelongsTeam" class="form-control" required >
-                                    {{-- valueにはteamsテーブルから取得したidが入る --}}
-                                    {{-- <option value="{{$team_id}}">{{$team_name}}</option> --}}
-                                    <option value="1">総務課</option>
-                                    <option value="2">企画商工課</option>
+
+                                    {{-- teamsテーブルから取得したデータを展開 --}}
+                                    @foreach ($teams as $team)  
+                                        <option value="{{$team->id}}">{{$team->team_name}}</option>
+                                    @endforeach
                                 </select>
 
                                 @error('team_id')
