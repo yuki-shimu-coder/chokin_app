@@ -48,11 +48,19 @@
     }
 
     &__button {
-        width: 200px;
-        height: 50px;
-        font-size: var.$font-size_xl;
+        font-size: var.$font-size_m;
         background: var.$palette-navy;
         color: #fff;
+
+        // タブレットデザイン
+        @include mixin.mq(sm) {
+            width: 40%;
+            font-size: var.$font-size_l;
+        }
+
+        // pcデザイン
+        @include mixin.mq(lg) {
+        }
         &:hover {
             cursor: pointer;
             background: rgba(121, 161, 212, 0.7);

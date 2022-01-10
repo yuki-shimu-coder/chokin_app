@@ -30,17 +30,23 @@
   <header class="l-header">
     <div class="l-container">
       <div class="p-header">
+
+        {{-- ヘッダーロゴ --}}
         <div class="p-header__logo">
-          <a href="">
+          <a href="{{ url('/') }}">
             <img src="" alt="">
             Chokin Diary
           </a>
         </div>
+        
+        {{-- ヘッダーメニュー --}}
         <nav class="p-header__nav">
+
           <ul class="p-header__menu">
             <li class="p-header__menu-item"><a href="">ログイン</a></li>
             <li class="p-header__menu-item"><a href="">新規登録</a></li>
           </ul>
+          
         </nav>
         <div class="c-menu-trigger">
           <i class="fas fa-bars"></i>
