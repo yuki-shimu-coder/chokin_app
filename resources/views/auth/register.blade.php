@@ -47,6 +47,11 @@
                     <input id="password" type="password" class="c-auth-input @error('password') is-invalid @enderror"
                         name="password" required autocomplete="new-password" type="password"
                         placeholder="パスワードを入力してください">
+                    @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
 
                 {{-- password再入力欄 --}}
@@ -62,7 +67,8 @@
                     <select name="team_id" class="c-auth-input" required>
                         {{-- teamsテーブルから取得したデータを展開 --}}
                         @foreach ($teams as $team)
-                        <option value="{{$team->id}}">{{$team->team_name}}</option>
+                        <option value="{{$team->id}}" @if ($team->id === (int)old('team_id')) selected
+                            @endif>{{$team->team_name}}</option>
                         @endforeach
                     </select>
                     @error('team_id')
