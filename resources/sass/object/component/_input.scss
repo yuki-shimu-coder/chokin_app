@@ -34,4 +34,12 @@
             }
         }
     }
+    &-teams {
+        position: relative;
+        margin-bottom: var.$space_l;
+        // pcデザイン
+        @include mixin.mq(lg) {
+            margin-bottom: var.$space_xl;
+        }
+    }
 }
