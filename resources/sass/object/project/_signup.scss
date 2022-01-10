@@ -6,7 +6,6 @@
 // ==================================
 .p-signup {
     display: flex;
-    text-align: center;
     justify-content: center;
     // pcデザイン
     @include mixin.mq(lg) {

@@ -9,11 +9,11 @@
             <div class="u-mgb--40">
                 <img src="{{asset('img/undraw_in_the_office_re_jtgc.svg')}}" alt="">
             </div>
-            <p>超勤をかんたん管理</p>
+            <p class="u-txt-center">超勤をかんたん管理</p>
         </div>
         <div class="p-signup__form">
-            <h1 class="p-signup__title u-mgb--40">ユーザー登録</h1>
-            <form  method="POST" action="{{ route('register') }}">
+            <h1 class="p-signup__title u-mgb--40 u-txt-center">ユーザー登録</h1>
+            <form method="POST" action="{{ route('register') }}">
                 @csrf
 
                 {{-- ユーザーネーム入力欄 --}}

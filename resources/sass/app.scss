@@ -1,43 +1,40 @@
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Nunito");
-
 // Variables
-@import "variables";
+@use "variables";
 
-// Bootstrap
-@import "~bootstrap/scss/bootstrap";
+// Bootstrap(先に読み込まないとスタイルが崩壊する)
+@use "~bootstrap/scss/bootstrap";
 
 // ***************************************************************
 // foundation
 // ***************************************************************
 
 // normalize
-@import "foundation/normalize";
+@forward "foundation/normalize";
 
 // 変数
-@import "foundation/variable";
+@forward "foundation/variable";
 
 // base
-@import "foundation/base";
+@forward "foundation/base";
 
 // mixin
-@import "foundation/mixin";
+@forward "foundation/mixin";
 
 // ***************************************************************
 // layout
 // ***************************************************************
 
 // header
-@import "layout/l-header";
+@forward "layout/l-header";
 
 // contatier
-@import "layout/container";
+@forward "layout/container";
 
 // main
-@import "layout/main";
+@forward "layout/main";
 
 // footer
-@import "layout/footer";
+@forward "layout/footer";
 
 // ***************************************************************
 // object
@@ -48,57 +45,64 @@
 // ==============================
 
 // haaderメニューボタン
-@import "object/component/menu-trigger";
+@forward "object/component/menu-trigger";
 
 // 新規登録・ログイン画面の入力エリア
-@import "object/component/auth-input";
+@forward "object/component/auth-input";
 
 // input
-@import "object/component/input";
+@forward "object/component/input";
 
 // ボタン
-@import "object/component/button";
+@forward "object/component/button";
 
 // インプットエリアにフォントアイコンを重ねる
-@import "object/component/input-icon";
+@forward "object/component/input-icon";
 
 // セレクトボックス
-@import "object/component/select-box";
+@forward "object/component/select-box";
 
 // カード
-@import "object/component/card";
+@forward "object/component/card";
 
 // ==============================
 // project
 // ==============================
 
 // header
-@import "object/project/p-header";
+@forward "object/project/p-header";
 
 // signup
-@import "object/project/signup";
+@forward "object/project/signup";
 
 // login
-@import "object/project/login";
+@forward "object/project/login";
 
 // record
-@import "object/project/record";
+@forward "object/project/record";
 
 // workstatus
-@import "object/project/work-status";
+@forward "object/project/work-status";
 
 // profile-edit
-@import "object/project/profile";
+@forward "object/project/profile";
 
 // ==============================
 // utility
 // ==============================
 
 // margin
-@import "object/utility/margin";
+@forward "object/utility/margin";
 
 // bgcolor
-@import "object/utility/bg-color";
+@forward "object/utility/bg-color";
 
 // border
-@import "object/utility/border";
+@forward "object/utility/border";
+
+// text-align
+@forward "object/utility/txt-align";
+
+// Laravelが用意したもの
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
