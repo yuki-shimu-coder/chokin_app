@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('template_self.app')
 
 @section('content')
 <div class="l-container">
@@ -36,9 +36,9 @@
 
                 {{-- ログイン保持 --}}
                 <div class="p-login__form-check">
-                    <input class="form-check-input u-mgr--10" type="checkbox" name="remember" id="remember" {{
-                        old('remember') ? 'checked' : '' }}>
-                    <label for="remember">情報を記憶する</label>
+                    <input class="u-mgr--10" type="checkbox" name="remember" id="remember" {{ old('remember')
+                        ? 'checked' : '' }}>
+                    <label for="remember" style="margin:0;">情報を記憶する</label>
                 </div>
 
                 {{-- パスワードリマインド --}}

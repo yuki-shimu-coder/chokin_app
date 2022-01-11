@@ -38,15 +38,39 @@
             Chokin Diary
           </a>
         </div>
-        
+
         {{-- ヘッダーメニュー --}}
+
         <nav class="p-header__nav">
+
+          {{-- ログイン前のゲスト --}}
+          @guest
 
           <ul class="p-header__menu">
             <li class="p-header__menu-item"><a href="">ログイン</a></li>
             <li class="p-header__menu-item"><a href="">新規登録</a></li>
           </ul>
-          
+
+          @else
+
+          {{-- ログインユーザー --}}
+          <ul class="p-header__menu">
+            <li class="p-header__menu-item"><a href="">超勤記録</a></li>
+            <li class="p-header__menu-item"><a href="">超勤の確認</a></li>
+            <li class="p-header__menu-item"><a href="">同僚の超勤を確認</a></li>
+            <li class="p-header__menu-item"><a href="">プロフィールを編集</a></li>
+            <li class="p-header__menu-item">
+              <a class="" href="{{ route('logout') }}" onclick="event.preventDefault();
+                         document.getElementById('logout-form').submit();
+                         ">ログアウト
+              </a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+              </form>
+            </li>
+          </ul>
+
+          @endguest
         </nav>
         <div class="c-menu-trigger">
           <i class="fas fa-bars"></i>
