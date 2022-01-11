@@ -47,8 +47,8 @@
           @guest
 
           <ul class="p-header__menu">
-            <li class="p-header__menu-item"><a href="">ログイン</a></li>
-            <li class="p-header__menu-item"><a href="">新規登録</a></li>
+            <li class="p-header__menu-item"><a href="{{ route('login') }}">ログイン</a></li>
+            <li class="p-header__menu-item"><a href="{{ route('register') }}">新規登録</a></li>
           </ul>
 
           @else
