@@ -2,14 +2,18 @@
 @use "../../foundation/mixin";
 
 // ==================================
-// c-menu-trigger
+// c-menu-close
 // ==================================
-.c-menu-trigger {
+
+.c-menu-close {
     // スマホデザイン〜
     display: block;
     font-size: 30px;
     margin-right: 20px;
     line-height: 60px;
+    position: absolute;
+    top: 0;
+    right: 0;
 
     // pcレスポンシブデザイン
     @include mixin.mq(lg) {

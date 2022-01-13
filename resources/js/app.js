@@ -30,4 +30,13 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    data: {
+        message: 'hello vue.js',
+        isActive: false
+    },
+    methods: {
+        onClick: function () {
+            console.log('onClick')
+        },
+    }
 });

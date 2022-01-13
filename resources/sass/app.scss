@@ -47,8 +47,11 @@
 // component
 // ==============================
 
-// haaderメニューボタン
+// headerメニューボタン
 @forward "object/component/menu-trigger";
+
+// headerメニュークローズボタン
+@forward "object/component//menu-close";
 
 // 新規登録・ログイン画面の入力エリア
 @forward "object/component/auth-input";
