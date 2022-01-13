@@ -45,6 +45,11 @@ Route::get('password', function () {
     return view('profile-pass');
 });
 
+// 認証系画面
 Auth::routes();
 
+// ホームページ
 Route::get('/home', 'HomeController@index')->name('home');
+
+// プロフィール変種
+Route::get('profile/edit', 'UsersController@edit')->name('profile-edit');

@@ -1,4 +1,4 @@
-@extends('app')
+@extends('template_self.app')
 
 @section('title','プロフィール編集画面')
 

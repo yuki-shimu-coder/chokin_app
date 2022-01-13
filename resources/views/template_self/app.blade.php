@@ -59,7 +59,7 @@
               <li class="p-header__menu-item"><a href="">超勤記録</a></li>
               <li class="p-header__menu-item"><a href="">超勤の確認</a></li>
               <li class="p-header__menu-item"><a href="">同僚の超勤を確認</a></li>
-              <li class="p-header__menu-item"><a href="">プロフィールを編集</a></li>
+              <li class="p-header__menu-item"><a href="{{ route('profile-edit') }}">プロフィールを編集</a></li>
               <li class="p-header__menu-item">
                 <a class="" href="{{ route('logout') }}" onclick="event.preventDefault();
                          document.getElementById('logout-form').submit();
@@ -94,7 +94,8 @@
       @yield('content')
 
       {{-- vueのdataを確認 --}}
-      {{-- <pre>@{{$data}}</pre> --}}
+      {{--
+      <pre>@{{$data}}</pre> --}}
     </main>
 
     <footer id="l-footer"></footer>
