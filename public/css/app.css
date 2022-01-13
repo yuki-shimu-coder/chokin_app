@@ -11660,6 +11660,7 @@ h1 {
 }
 
 .p-header {
+  font-size: 12px;
   display: flex;
   justify-content: space-between;
 }
