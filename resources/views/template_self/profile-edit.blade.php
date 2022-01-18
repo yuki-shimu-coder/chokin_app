@@ -23,19 +23,31 @@
       <form action="{{route('profile-update')}}" method="POST">
         @csrf
 
+        {{-- ユーザーネーム入力欄 --}}
         <label for="username">ユーザーネーム</label>
         <div id="c-input-username">
           <i class="fas fa-user c-input-icon"></i>
           {{-- old()の第二引数 --}}
           <input type="text" class="c-auth-input @error('name') is-invalid @enderror" placeholder="名前を入力してください"
             id="username" name="name" value="{{ old('name', isset($user->name) ? $user->name : '') }}">
+          @error('name')
+          <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+          </span>
+          @enderror
         </div>
 
+        {{-- email入力欄 --}}
         <label for="email">メールアドレス</label>
         <div id="c-input-email">
           <i class="fas fa-envelope c-input-icon"></i>
-          <input type="text" class="c-auth-input" placeholder="Emailアドレスを入力してください" id="email" name="email"
-            value="{{ old('email', isset($user->email) ? $user->email : '') }}">
+          <input type="text" class="c-auth-input @error('email') is-invalid @enderror" placeholder="Emailアドレスを入力してください"
+            id="email" name="email" value="{{ old('email', isset($user->email) ? $user->email : '') }}">
+          @error('email')
+          <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+          </span>
+          @enderror
         </div>
 
         <label for="team">所属課</label>
@@ -48,6 +60,11 @@
               @endif>{{$team->team_name}}</option>
             @endforeach
           </select>
+          @error('team_id')
+          <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+          </span>
+          @enderror
 
         </div>
         <button type="submit" class="c-button p-profile__btn">更新する</button>

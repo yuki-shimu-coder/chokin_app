@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Team;
+use App\Http\Requests\ProfileUpdatePost;
+
 
 class UsersController extends Controller
 {
@@ -21,5 +23,12 @@ class UsersController extends Controller
         $teams = Team::all();
 
         return view('template_self.profile-edit', compact('user', 'belongsto_team', 'teams'));
+    }
+
+    // プロフィールを更新する
+    public function update(ProfileUpdatePost $request)
+    {
+        $input = $request->all();
+        dd($input);
     }
 }
