@@ -74,9 +74,11 @@
 
   </div>
 
-  <pre>{{$user}}</pre>
+
+  {{-- デバッグ用 --}}
+  {{-- <pre>{{$user}}</pre>
   <pre>{{$belongsto_team}}</pre>
-  <pre>{{$teams}}</pre>
+  <pre>{{$teams}}</pre> --}}
 </div>
 
 @endsection
