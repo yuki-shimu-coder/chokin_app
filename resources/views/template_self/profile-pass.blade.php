@@ -24,19 +24,19 @@
         <label for="oldPass">現在のパスワード</label>
         <div id="c-input-username">
           <i class="fas fa-lock c-input-icon"></i>
-          <input type="text" class="c-auth-input" placeholder="現在のパスワードを入力してください" id="oldPass">
+          <input type="text" class="c-auth-input" name="pass_old" placeholder="現在のパスワードを入力してください" id="oldPass">
         </div>
 
         <label for="newPass">新しいパスワード</label>
         <div id="c-input-email">
           <i class="fas fa-lock c-input-icon"></i>
-          <input type="text" class="c-auth-input" placeholder="新しいパスワードを入力してください" id="newPass">
+          <input type="text" class="c-auth-input" name="pass_new" placeholder="新しいパスワードを入力してください" id="newPass">
         </div>
 
         <label for="newPass-re">新しいパスワード（再入力）</label>
         <div id="c-input-password">
           <i class="fas fa-lock c-input-icon"></i>
-          <input type="text" class="c-auth-input" placeholder="再入力してください" id="newPass-re">
+          <input type="text" class="c-auth-input" name="pass_new_re" placeholder="再入力してください" id="newPass-re">
         </div>
         <button type="submit" class="c-button p-profile__btn">パスワードを変更する</button>
       </form>
