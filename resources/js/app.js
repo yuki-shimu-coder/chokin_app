@@ -6,6 +6,7 @@
 
 require('./bootstrap');
 require('./footer_fixed');
+require('./flash_message');
 
 window.Vue = require('vue');
 

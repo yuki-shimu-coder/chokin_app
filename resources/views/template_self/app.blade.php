@@ -28,6 +28,12 @@
 
 <body>
   <div id="app">
+    {{-- フラッシュメッセージ --}}
+    @if (session('flash_message'))
+    <div class="flash_message bg-success text-center py-3 my-0" style="display: none;">
+      {{ session('flash_message') }}
+    </div>
+    @endif
     <header class="l-header">
       <div class="l-container">
         <div class="p-header">

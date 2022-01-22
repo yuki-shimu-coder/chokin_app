@@ -8,6 +8,7 @@
     <div class="p-record__form">
       <h1 class="p-record__title u-mgb--40">超勤記録画面</h1>
       <form action="">
+        @csrf
         {{-- 申請日 --}}
         <section class="p-record__date">
           <div class="p-record__head"><i class="fas fa-calendar-alt u-mgr--10"></i>申請日</div>

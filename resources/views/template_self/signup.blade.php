@@ -14,6 +14,7 @@
     <div class="p-signup__form">
       <h1 class="p-signup__title u-mgb--40">ユーザー登録</h1>
       <form action="" method="POST">
+        @csrf
         <div id="c-input-username">
           <i class="fas fa-user c-input-icon"></i>
           <input type="text" class="c-auth-input" placeholder="名前を入力してください">

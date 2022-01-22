@@ -33,6 +33,7 @@
               <a href="" class="c-button --edit">編集</a>
             </div>
             <form action="" method="POST">
+              @csrf
               <button class="c-button --delete">削除</button>
             </form>
           </div>

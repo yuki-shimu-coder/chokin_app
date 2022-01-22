@@ -20,6 +20,7 @@
     <div class="p-profile__main">
       <h1 class="p-profile__title u-mgb--40">パスワード編集</h1>
       <form action="" method="POST">
+        @csrf
         <label for="oldPass">現在のパスワード</label>
         <div id="c-input-username">
           <i class="fas fa-lock c-input-icon"></i>
