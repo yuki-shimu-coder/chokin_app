@@ -36,6 +36,11 @@ class UsersController extends Controller
         // マイページにリダイレクトする
         // その時にsessionフラッシュにメッセージを入れる
         return redirect('/home')->with('flash_message', 'プロフィールを更新しました。');
+    }
 
+    // パスワード編集画面のビューを表示する
+    public function changePassword()
+    {
+        return view('template_self.profile-pass');
     }
 }

@@ -55,4 +55,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('profile/edit', 'UsersController@edit')->name('profile-edit');
 
 // プロフィールの更新
-Route::post('profile/edit','UsersController@update')->name('profile-update');
+Route::post('profile/edit', 'UsersController@update')->name('profile-update');
+
+// パスワードの変更
+Route::get('profile/password', 'UsersController@changePassword')->name('change-password');
