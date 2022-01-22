@@ -56,6 +56,7 @@ class RegisterController extends Controller
             'email' => [
                 'required', 'string', 'email', 'max:255',
                 
+                // deleted_atがNULLとは論理削除されていないということ。
                 // こうすること退会ユーザーが再登録する際、同じemailを使用することができる
                 Rule::unique('users')->whereNull('deleted_at'),
             ],
