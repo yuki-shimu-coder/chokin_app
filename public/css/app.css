@@ -11904,7 +11904,7 @@ h1 {
 }
 
 .p-record__body {
-  padding: 20px;
+  padding: 30px;
   background: #fff;
   border-radius: 0 0 3px 3px;
   text-align: left;
@@ -11983,11 +11983,15 @@ h1 {
   background: green;
 }
 
+.p-record__multiplier-label.\--weekday--midnight {
+  background: #3035c5;
+}
+
 .p-record__multiplier-label.\--holiday {
   background: coral;
 }
 
-.p-record__multiplier-label.\--midnight {
+.p-record__multiplier-label.\--holiday--midnight {
   background: #861eb6;
 }
 

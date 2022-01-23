@@ -1,4 +1,4 @@
-@extends('app')
+@extends('template_self.app')
 
 @section('title','超勤記録画面')
 
@@ -26,7 +26,28 @@
             {{-- 平日 --}}
             <div class="p-record__multiplier-wrap">
               <div class="p-record__multiplier-label --weekday">
-                平日乗率
+                平日一般
+              </div>
+              <div class="p-record__time-select">
+                <div class="p-record__time-start">
+                  <div class="c-card u-mgr--10">開始</div>
+                  <select name="" id="" class="c-cp_ipselect c-cp_sl02">
+                    <option value="">××時××分</option>
+                  </select>
+                </div>
+                <div class="p-record__time-end">
+                  <div class="c-card u-mgr--10">終了</div>
+                  <select name="" id="" class="c-cp_ipselect c-cp_sl02">
+                    <option value="">××時××分</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            {{-- 平日深夜 --}}
+            <div class="p-record__multiplier-wrap">
+              <div class="p-record__multiplier-label --weekday--midnight">
+                平日深夜
               </div>
               <div class="p-record__time-select">
                 <div class="p-record__time-start">
@@ -47,7 +68,7 @@
             {{-- 休日 --}}
             <div class="p-record__multiplier-wrap">
               <div class="p-record__multiplier-label --holiday">
-                休日乗率
+                休日一般
               </div>
               <div class="p-record__time-select">
                 <div class="p-record__time-start">
@@ -67,8 +88,8 @@
 
             {{-- 深夜 --}}
             <div class="p-record__multiplier-wrap">
-              <div class="p-record__multiplier-label --midnight">
-                深夜乗率
+              <div class="p-record__multiplier-label --holiday--midnight">
+                休日深夜
               </div>
               <div class="p-record__time-select">
                 <div class="p-record__time-start">

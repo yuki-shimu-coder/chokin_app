@@ -21,7 +21,7 @@
         text-align: left;
     }
     &__body {
-        padding: 20px;
+        padding: var.$space_xxl;
         background: #fff;
         border-radius: 0 0 3px 3px;
         text-align: left;
@@ -91,12 +91,15 @@
 
             &.--weekday {
                 background: green;
+                &--midnight {
+                    background: rgb(48, 53, 197);
+                }
             }
             &.--holiday {
                 background: coral;
-            }
-            &.--midnight {
-                background: rgb(134, 30, 182);
+                &--midnight {
+                    background: rgb(134, 30, 182);
+                }
             }
         }
     }

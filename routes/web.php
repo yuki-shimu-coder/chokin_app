@@ -62,3 +62,9 @@ Route::get('/password/edit', 'UsersController@editPassword')->name('password-edi
 
 // パスワードの更新
 Route::post('/password/edit', 'UsersController@updatePassword')->name('password-update');
+
+
+// 超勤記録ページ
+Route::get('/worktime-record', function () {
+    return view('template_self.worktime-record');
+});
