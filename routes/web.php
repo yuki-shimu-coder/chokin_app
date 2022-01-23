@@ -58,4 +58,7 @@ Route::get('profile/edit', 'UsersController@edit')->name('profile-edit');
 Route::post('profile/edit', 'UsersController@update')->name('profile-update');
 
 // パスワードの変更
-Route::get('profile/password', 'UsersController@changePassword')->name('change-password');
+Route::get('/password/edit', 'UsersController@editPassword')->name('password-edit');
+
+// パスワードの更新
+Route::post('/password/edit', 'UsersController@updatePassword')->name('password-update');
