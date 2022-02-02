@@ -29,7 +29,7 @@ class AddForeignToWorktimeRecordsUserId extends Migration
     public function down()
     {
         Schema::table('worktime_records', function (Blueprint $table) {
-            // 外部キー付きのカラムを削除するには、まず必ず外部キー制約を外す。
+            //
             $table->dropForeign(['user_id']);
         });
     }
