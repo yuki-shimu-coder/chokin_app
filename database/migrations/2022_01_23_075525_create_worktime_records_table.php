@@ -15,6 +15,18 @@ class CreateWorktimeRecordsTable extends Migration
     {
         Schema::create('worktime_records', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->date('record_date');
+            $table->time('weekday_morning_start');
+            $table->time('weekday_morning_end');
+            $table->time('weekday_normal_start');
+            $table->time('weekday_normal_end');
+            $table->time('weekday_midnight_start');
+            $table->time('weekday_midnight_end');
+            $table->time('holiday_start');
+            $table->time('holiday_end');
+            $table->time('holiday_midnight_start');
+            $table->time('holiday_midnight_end');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
     }
