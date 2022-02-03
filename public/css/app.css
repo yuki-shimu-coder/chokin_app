@@ -11980,11 +11980,15 @@ h1 {
 }
 
 .p-record__multiplier-label.\--weekday {
-  background: green;
+  background: #2baa37;
+}
+
+.p-record__multiplier-label.\--weekday--morning {
+  background: #2b5dff;
 }
 
 .p-record__multiplier-label.\--weekday--midnight {
-  background: #3035c5;
+  background: #643c21;
 }
 
 .p-record__multiplier-label.\--holiday {

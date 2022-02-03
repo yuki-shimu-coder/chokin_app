@@ -90,9 +90,12 @@
             }
 
             &.--weekday {
-                background: green;
+                background: rgb(43, 170, 55);
+                &--morning{
+                    background: rgb(43,93,255);
+                }
                 &--midnight {
-                    background: rgb(48, 53, 197);
+                    background: rgb(100, 60, 33);
                 }
             }
             &.--holiday {
