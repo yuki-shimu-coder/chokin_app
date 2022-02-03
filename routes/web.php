@@ -57,14 +57,12 @@ Route::get('profile/edit', 'UsersController@edit')->name('profile-edit');
 // プロフィールの更新
 Route::post('profile/edit', 'UsersController@update')->name('profile-update');
 
-// パスワードの変更
+// パスワードの編集画面
 Route::get('/password/edit', 'UsersController@editPassword')->name('password-edit');
 
 // パスワードの更新
 Route::post('/password/edit', 'UsersController@updatePassword')->name('password-update');
 
 
-// 超勤記録ページ
-Route::get('/worktime-record', function () {
-    return view('template_self.worktime-record');
-});
+// 超勤記録画面
+Route::get('/worktime/record', 'WorktimeRecordsController@show')->name('worktime-record');
