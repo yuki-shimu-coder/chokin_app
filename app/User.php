@@ -40,9 +40,15 @@ class User extends Authenticatable
     ];
 
 
-    // リレーションの設定
+    // リレーションの設定(team)
     public function team()
     {
         return $this->belongsTo('App\Team');
+    }
+
+    // リレーションの設定(worktime_record)
+    public function worktime_records()
+    {
+        return $this->hasMany('App\WorktimeRecord');
     }
 }
