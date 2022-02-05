@@ -7,13 +7,13 @@
   <div class="p-record">
     <div class="p-record__form">
       <h1 class="p-record__title u-mgb--40">超勤記録画面</h1>
-      <form action="">
+      <form action="{{ route('worktime-record_request') }}" method="POST">
         @csrf
         {{-- 申請日 --}}
         <section class="p-record__date">
           <div class="p-record__head"><i class="fas fa-calendar-alt u-mgr--10"></i>申請日</div>
           <div class="p-record__body">
-            <input type="date" name="" id="">
+            <input type="date" name="record_date" id="">
           </div>
         </section>
 
@@ -32,7 +32,9 @@
                 {{-- 開始時刻 --}}
                 <div class="p-record__time-start">
                   <div class="c-card u-mgr--10">開始</div>
-                  <select name="" id="" class="c-cp_ipselect c-cp_sl02">
+
+                  <select name="weekday_morning_start" id="" class="c-cp_ipselect c-cp_sl02">
+                    <option value="0">未選択</option>
                     @foreach ($weekday_morning_start as $value)
                     <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
                     @endforeach
@@ -41,7 +43,8 @@
                 {{-- 終了時刻 --}}
                 <div class="p-record__time-end">
                   <div class="c-card u-mgr--10">終了</div>
-                  <select name="" id="" class="c-cp_ipselect c-cp_sl02">
+                  <select name="weekday_morning_end" id="" class="c-cp_ipselect c-cp_sl02">
+                    <option value="0">未選択</option>
                     @foreach ($weekday_morning_end as $value)
                     <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
                     @endforeach
@@ -58,7 +61,8 @@
               <div class="p-record__time-select">
                 <div class="p-record__time-start">
                   <div class="c-card u-mgr--10">開始</div>
-                  <select name="" id="" class="c-cp_ipselect c-cp_sl02">
+                  <select name="weekday_normal_start" id="" class="c-cp_ipselect c-cp_sl02">
+                    <option value="0">未選択</option>
                     @foreach ($weekday_normal_start as $value)
                     <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
                     @endforeach
@@ -66,7 +70,8 @@
                 </div>
                 <div class="p-record__time-end">
                   <div class="c-card u-mgr--10">終了</div>
-                  <select name="" id="" class="c-cp_ipselect c-cp_sl02">
+                  <select name="weekday_normal_end" id="" class="c-cp_ipselect c-cp_sl02">
+                    <option value="0">未選択</option>
                     @foreach ($weekday_normal_end as $value)
                     <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
                     @endforeach
@@ -83,7 +88,8 @@
               <div class="p-record__time-select">
                 <div class="p-record__time-start">
                   <div class="c-card u-mgr--10">開始</div>
-                  <select name="" id="" class="c-cp_ipselect c-cp_sl02">
+                  <select name="weekday_midnight_start" id="" class="c-cp_ipselect c-cp_sl02">
+                    <option value="0">未選択</option>
                     @foreach ($weekday_midnight_start as $value)
                     <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
                     @endforeach
@@ -91,7 +97,8 @@
                 </div>
                 <div class="p-record__time-end">
                   <div class="c-card u-mgr--10">終了</div>
-                  <select name="" id="" class="c-cp_ipselect c-cp_sl02">
+                  <select name="weekday_midnight_end" id="" class="c-cp_ipselect c-cp_sl02">
+                    <option value="0">未選択</option>
                     @foreach ($weekday_midnight_end as $value)
                     <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
                     @endforeach
@@ -108,7 +115,8 @@
               <div class="p-record__time-select">
                 <div class="p-record__time-start">
                   <div class="c-card u-mgr--10">開始</div>
-                  <select name="" id="" class="c-cp_ipselect c-cp_sl02">
+                  <select name="holiday_start" id="" class="c-cp_ipselect c-cp_sl02">
+                    <option value="0">未選択</option>
                     @foreach ($holiday_start as $value)
                     <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
                     @endforeach
@@ -116,7 +124,8 @@
                 </div>
                 <div class="p-record__time-end">
                   <div class="c-card u-mgr--10">終了</div>
-                  <select name="" id="" class="c-cp_ipselect c-cp_sl02">
+                  <select name="holiday_end" id="" class="c-cp_ipselect c-cp_sl02">
+                    <option value="0">未選択</option>
                     @foreach ($holiday_end as $value)
                     <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
                     @endforeach
@@ -133,7 +142,8 @@
               <div class="p-record__time-select">
                 <div class="p-record__time-start">
                   <div class="c-card u-mgr--10">開始</div>
-                  <select name="" id="" class="c-cp_ipselect c-cp_sl02">
+                  <select name="holiday_midnight_start" id="" class="c-cp_ipselect c-cp_sl02">
+                    <option value="0">未選択</option>
                     @foreach ($holiday_midnight_start as $value)
                     <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
                     @endforeach
@@ -141,7 +151,8 @@
                 </div>
                 <div class="p-record__time-end">
                   <div class="c-card u-mgr--10">終了</div>
-                  <select name="" id="" class="c-cp_ipselect c-cp_sl02">
+                  <select name="holiday_midnight_end" id="" class="c-cp_ipselect c-cp_sl02">
+                    <option value="0">未選択</option>
                     @foreach ($holiday_midnight_end as $value)
                     <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
                     @endforeach
@@ -159,7 +170,8 @@
         <section class="p-record__reason">
           <div class="p-record__head"><i class="fas fa-desktop u-mgr--10"></i>超勤理由</div>
           <div class="p-record__body">
-            <textarea name="" id="" rows="3" placeholder="超勤理由を入力してください" class="p-record__reason-text"></textarea>
+            <textarea name="work_content" id="" rows="3" placeholder="超勤理由を入力してください"
+              class="p-record__reason-text"></textarea>
           </div>
         </section>
 

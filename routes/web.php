@@ -66,3 +66,6 @@ Route::post('/password/edit', 'UsersController@updatePassword')->name('password-
 
 // 超勤記録画面
 Route::get('/worktime/record', 'WorktimeRecordsController@show')->name('worktime-record');
+
+// 超勤内容の登録
+Route::post('/worktime/record', 'WorktimeRecordsController@record')->name('worktime-record_request');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\User;
+use App\WorktimeRecord;
 
 class WorktimeRecordsController extends Controller
 {
@@ -45,5 +46,15 @@ class WorktimeRecordsController extends Controller
             'holiday_midnight_start',
             'holiday_midnight_end'
         ));
+    }
+
+    // 超勤内容の登録処理
+    public function record(Request $request)
+    {
+        // モデルインスタンスを用意
+        $worktimeRecord = new WorktimeRecord;
+
+        // 現在のログインユーザーが勤務時間内容を登録する
+        Auth::user()->worktime_records()->save($worktimeRecord->fill($request->all()));
     }
 }
