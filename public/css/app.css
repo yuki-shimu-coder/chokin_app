@@ -11918,7 +11918,6 @@ h1 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  margin-top: 10px;
 }
 
 @media screen and (min-width: 992px) {
@@ -11945,6 +11944,7 @@ h1 {
 @media screen and (min-width: 992px) {
   .p-record__time-end {
     margin-top: 0;
+    margin-left: 20px;
   }
 }
 
@@ -11957,6 +11957,12 @@ h1 {
 
 .p-record__multiplier-wrap:last-child {
   margin-bottom: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .p-record__multiplier-wrap {
+    flex-direction: row;
+  }
 }
 
 .p-record__multiplier-label {

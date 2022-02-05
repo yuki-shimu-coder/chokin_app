@@ -35,7 +35,6 @@
             display: flex;
             justify-content: space-between;
             flex-direction: column;
-            margin-top: var.$space_m;
             @include mixin.mq(lg) {
                 flex-direction: row;
             }
@@ -53,6 +52,7 @@
             margin-top: var.$space_m;
             @include mixin.mq(lg) {
                 margin-top: 0;
+                margin-left: var.$space_xl;
             }
         }
     }
@@ -68,6 +68,7 @@
             }
             // pcデザイン
             @include mixin.mq(lg) {
+                flex-direction: row;
             }
         }
         &-label {
@@ -91,8 +92,8 @@
 
             &.--weekday {
                 background: rgb(43, 170, 55);
-                &--morning{
-                    background: rgb(43,93,255);
+                &--morning {
+                    background: rgb(43, 93, 255);
                 }
                 &--midnight {
                     background: rgb(100, 60, 33);
