@@ -29,16 +29,22 @@
                 平日早朝
               </div>
               <div class="p-record__time-select">
+                {{-- 開始時刻 --}}
                 <div class="p-record__time-start">
                   <div class="c-card u-mgr--10">開始</div>
                   <select name="" id="" class="c-cp_ipselect c-cp_sl02">
-                    <option value="">××時××分</option>
+                    @foreach ($weekday_morning_start as $value)
+                    <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
+                    @endforeach
                   </select>
                 </div>
+                {{-- 終了時刻 --}}
                 <div class="p-record__time-end">
                   <div class="c-card u-mgr--10">終了</div>
                   <select name="" id="" class="c-cp_ipselect c-cp_sl02">
-                    <option value="">××時××分</option>
+                    @foreach ($weekday_morning_end as $value)
+                    <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
+                    @endforeach
                   </select>
                 </div>
               </div>
@@ -53,13 +59,17 @@
                 <div class="p-record__time-start">
                   <div class="c-card u-mgr--10">開始</div>
                   <select name="" id="" class="c-cp_ipselect c-cp_sl02">
-                    <option value="">××時××分</option>
+                    @foreach ($weekday_normal_start as $value)
+                    <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
+                    @endforeach
                   </select>
                 </div>
                 <div class="p-record__time-end">
                   <div class="c-card u-mgr--10">終了</div>
                   <select name="" id="" class="c-cp_ipselect c-cp_sl02">
-                    <option value="">××時××分</option>
+                    @foreach ($weekday_normal_end as $value)
+                    <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
+                    @endforeach
                   </select>
                 </div>
               </div>
@@ -74,13 +84,17 @@
                 <div class="p-record__time-start">
                   <div class="c-card u-mgr--10">開始</div>
                   <select name="" id="" class="c-cp_ipselect c-cp_sl02">
-                    <option value="">××時××分</option>
+                    @foreach ($weekday_midnight_start as $value)
+                    <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
+                    @endforeach
                   </select>
                 </div>
                 <div class="p-record__time-end">
                   <div class="c-card u-mgr--10">終了</div>
                   <select name="" id="" class="c-cp_ipselect c-cp_sl02">
-                    <option value="">××時××分</option>
+                    @foreach ($weekday_midnight_end as $value)
+                    <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
+                    @endforeach
                   </select>
                 </div>
               </div>
@@ -95,13 +109,17 @@
                 <div class="p-record__time-start">
                   <div class="c-card u-mgr--10">開始</div>
                   <select name="" id="" class="c-cp_ipselect c-cp_sl02">
-                    <option value="">××時××分</option>
+                    @foreach ($holiday_start as $value)
+                    <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
+                    @endforeach
                   </select>
                 </div>
                 <div class="p-record__time-end">
                   <div class="c-card u-mgr--10">終了</div>
                   <select name="" id="" class="c-cp_ipselect c-cp_sl02">
-                    <option value="">××時××分</option>
+                    @foreach ($holiday_end as $value)
+                    <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
+                    @endforeach
                   </select>
                 </div>
               </div>
@@ -116,13 +134,17 @@
                 <div class="p-record__time-start">
                   <div class="c-card u-mgr--10">開始</div>
                   <select name="" id="" class="c-cp_ipselect c-cp_sl02">
-                    <option value="">××時××分</option>
+                    @foreach ($holiday_midnight_start as $value)
+                    <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
+                    @endforeach
                   </select>
                 </div>
                 <div class="p-record__time-end">
                   <div class="c-card u-mgr--10">終了</div>
                   <select name="" id="" class="c-cp_ipselect c-cp_sl02">
-                    <option value="">××時××分</option>
+                    @foreach ($holiday_midnight_end as $value)
+                    <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
+                    @endforeach
                   </select>
                 </div>
               </div>

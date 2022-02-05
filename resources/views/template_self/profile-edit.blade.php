@@ -51,6 +51,7 @@
           <select name="team_id" class="c-auth-input" required>
             {{-- teamsテーブルから取得したデータを展開 --}}
             @foreach ($teams as $team)
+            {{-- old関数の第２引数ではデフォルト値を取ることができる --}}
             <option value="{{$team->id}}" @if ($team->id === (int)old('team_id',$belongsto_team->id)) selected
               @endif>{{$team->team_name}}</option>
             @endforeach
