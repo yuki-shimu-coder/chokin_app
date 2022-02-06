@@ -192,6 +192,13 @@
             </span>
             @enderror
 
+            {{-- 全ての勤務時間入力フォームが空だった場合のバリデーションチェック用のフォーム --}}
+            <input type="hidden" name="worktimes" value="" class="@error('worktimes') is-invalid @enderror">
+            @error('worktimes')
+            <span class="invalid-feedback" role="alert" style="position: relative;top:-18px;">
+              <strong>{{ $message }}</strong>
+            </span>
+            @enderror
           </div>
 
 
@@ -210,6 +217,8 @@
             @enderror
           </div>
         </section>
+
+
 
         {{-- 超勤記録ボタン --}}
         <button type="submit" class="c-button p-record__btn">記録する</button>
