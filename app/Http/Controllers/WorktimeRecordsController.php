@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\User;
 use App\WorktimeRecord;
+use App\Http\Requests\WorkTimeRecordPost;
+
 
 class WorktimeRecordsController extends Controller
 {
@@ -49,7 +51,7 @@ class WorktimeRecordsController extends Controller
     }
 
     // 超勤内容の登録処理
-    public function record(Request $request)
+    public function record(WorkTimeRecordPost $request)
     {
         // モデルインスタンスを用意
         $worktimeRecord = new WorktimeRecord;

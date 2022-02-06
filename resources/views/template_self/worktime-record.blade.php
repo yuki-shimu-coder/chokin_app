@@ -13,7 +13,12 @@
         <section class="p-record__date">
           <div class="p-record__head"><i class="fas fa-calendar-alt u-mgr--10"></i>申請日</div>
           <div class="p-record__body">
-            <input type="date" name="record_date" id="">
+            <input type="date" name="record_date" id="" class="@error('record_date') is-invalid @enderror">
+            @error('record_date')
+            <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+            </span>
+            @enderror
           </div>
         </section>
 
@@ -24,7 +29,7 @@
           <div class="p-record__body">
 
             {{-- 平日早朝 --}}
-            <div class="p-record__multiplier-wrap">
+            <div class="p-record__multiplier-wrap @error('weekday_morning_end') is-invalid @enderror">
               <div class="p-record__multiplier-label --weekday--morning">
                 平日早朝
               </div>
@@ -34,7 +39,7 @@
                   <div class="c-card u-mgr--10">開始</div>
 
                   <select name="weekday_morning_start" id="" class="c-cp_ipselect c-cp_sl02">
-                    <option value="0">未選択</option>
+                    <option value="">未選択</option>
                     @foreach ($weekday_morning_start as $value)
                     <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
                     @endforeach
@@ -44,17 +49,23 @@
                 <div class="p-record__time-end">
                   <div class="c-card u-mgr--10">終了</div>
                   <select name="weekday_morning_end" id="" class="c-cp_ipselect c-cp_sl02">
-                    <option value="0">未選択</option>
+                    <option value="">未選択</option>
                     @foreach ($weekday_morning_end as $value)
                     <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
+
                 </div>
               </div>
             </div>
+            @error('weekday_morning_end')
+            <span class="invalid-feedback" role="alert" style="position: relative;top:-18px;">
+              <strong>{{ $message }}</strong>
+            </span>
+            @enderror
 
             {{-- 平日 --}}
-            <div class="p-record__multiplier-wrap">
+            <div class="p-record__multiplier-wrap @error('weekday_normal_end') is-invalid @enderror">
               <div class="p-record__multiplier-label --weekday">
                 平日一般
               </div>
@@ -62,7 +73,7 @@
                 <div class="p-record__time-start">
                   <div class="c-card u-mgr--10">開始</div>
                   <select name="weekday_normal_start" id="" class="c-cp_ipselect c-cp_sl02">
-                    <option value="0">未選択</option>
+                    <option value="">未選択</option>
                     @foreach ($weekday_normal_start as $value)
                     <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
                     @endforeach
@@ -71,7 +82,7 @@
                 <div class="p-record__time-end">
                   <div class="c-card u-mgr--10">終了</div>
                   <select name="weekday_normal_end" id="" class="c-cp_ipselect c-cp_sl02">
-                    <option value="0">未選択</option>
+                    <option value="">未選択</option>
                     @foreach ($weekday_normal_end as $value)
                     <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
                     @endforeach
@@ -79,9 +90,14 @@
                 </div>
               </div>
             </div>
+            @error('weekday_normal_end')
+            <span class="invalid-feedback" role="alert" style="position: relative;top:-18px;">
+              <strong>{{ $message }}</strong>
+            </span>
+            @enderror
 
             {{-- 平日深夜 --}}
-            <div class="p-record__multiplier-wrap">
+            <div class="p-record__multiplier-wrap @error('weekday_midnight_end') is-invalid @enderror">
               <div class="p-record__multiplier-label --weekday--midnight">
                 平日深夜
               </div>
@@ -89,7 +105,7 @@
                 <div class="p-record__time-start">
                   <div class="c-card u-mgr--10">開始</div>
                   <select name="weekday_midnight_start" id="" class="c-cp_ipselect c-cp_sl02">
-                    <option value="0">未選択</option>
+                    <option value="">未選択</option>
                     @foreach ($weekday_midnight_start as $value)
                     <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
                     @endforeach
@@ -98,7 +114,7 @@
                 <div class="p-record__time-end">
                   <div class="c-card u-mgr--10">終了</div>
                   <select name="weekday_midnight_end" id="" class="c-cp_ipselect c-cp_sl02">
-                    <option value="0">未選択</option>
+                    <option value="">未選択</option>
                     @foreach ($weekday_midnight_end as $value)
                     <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
                     @endforeach
@@ -106,9 +122,14 @@
                 </div>
               </div>
             </div>
+            @error('weekday_midnight_end')
+            <span class="invalid-feedback" role="alert" style="position: relative;top:-18px;">
+              <strong>{{ $message }}</strong>
+            </span>
+            @enderror
 
             {{-- 休日 --}}
-            <div class="p-record__multiplier-wrap">
+            <div class="p-record__multiplier-wrap @error('holiday_end') is-invalid @enderror">
               <div class="p-record__multiplier-label --holiday">
                 休日一般
               </div>
@@ -116,7 +137,7 @@
                 <div class="p-record__time-start">
                   <div class="c-card u-mgr--10">開始</div>
                   <select name="holiday_start" id="" class="c-cp_ipselect c-cp_sl02">
-                    <option value="0">未選択</option>
+                    <option value="">未選択</option>
                     @foreach ($holiday_start as $value)
                     <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
                     @endforeach
@@ -125,7 +146,7 @@
                 <div class="p-record__time-end">
                   <div class="c-card u-mgr--10">終了</div>
                   <select name="holiday_end" id="" class="c-cp_ipselect c-cp_sl02">
-                    <option value="0">未選択</option>
+                    <option value="">未選択</option>
                     @foreach ($holiday_end as $value)
                     <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
                     @endforeach
@@ -133,9 +154,14 @@
                 </div>
               </div>
             </div>
+            @error('holiday_end')
+            <span class="invalid-feedback" role="alert" style="position: relative;top:-18px;">
+              <strong>{{ $message }}</strong>
+            </span>
+            @enderror
 
             {{-- 深夜 --}}
-            <div class="p-record__multiplier-wrap">
+            <div class="p-record__multiplier-wrap @error('holiday_midnight_end') is-invalid @enderror">
               <div class="p-record__multiplier-label --holiday--midnight">
                 休日深夜
               </div>
@@ -143,7 +169,7 @@
                 <div class="p-record__time-start">
                   <div class="c-card u-mgr--10">開始</div>
                   <select name="holiday_midnight_start" id="" class="c-cp_ipselect c-cp_sl02">
-                    <option value="0">未選択</option>
+                    <option value="">未選択</option>
                     @foreach ($holiday_midnight_start as $value)
                     <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
                     @endforeach
@@ -152,7 +178,7 @@
                 <div class="p-record__time-end">
                   <div class="c-card u-mgr--10">終了</div>
                   <select name="holiday_midnight_end" id="" class="c-cp_ipselect c-cp_sl02">
-                    <option value="0">未選択</option>
+                    <option value="">未選択</option>
                     @foreach ($holiday_midnight_end as $value)
                     <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
                     @endforeach
@@ -160,6 +186,11 @@
                 </div>
               </div>
             </div>
+            @error('holiday_midnight_end')
+            <span class="invalid-feedback" role="alert" style="position: relative;top:-18px;">
+              <strong>{{ $message }}</strong>
+            </span>
+            @enderror
 
           </div>
 
@@ -171,7 +202,12 @@
           <div class="p-record__head"><i class="fas fa-desktop u-mgr--10"></i>超勤理由</div>
           <div class="p-record__body">
             <textarea name="work_content" id="" rows="3" placeholder="超勤理由を入力してください"
-              class="p-record__reason-text"></textarea>
+              class="p-record__reason-text @error('work_content') is-invalid @enderror"></textarea>
+            @error('work_content')
+            <span class="invalid-feedback" role="alert" style="position: relative;top:-18px;">
+              <strong>{{ $message }}</strong>
+            </span>
+            @enderror
           </div>
         </section>
 

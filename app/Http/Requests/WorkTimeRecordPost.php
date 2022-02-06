@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Rules\LargeStart;
 
 class WorkTimeRecordPost extends FormRequest
 {
@@ -25,6 +26,18 @@ class WorkTimeRecordPost extends FormRequest
     {
         return [
             //
+            'record_date' => ['required'],
+            'weekday_morning_start' => [],
+            'weekday_morning_end' => [new LargeStart],
+            'weekday_normal_start' => [],
+            'weekday_normal_end' => [new LargeStart],
+            'weekday_midnight_start' => [],
+            'weekday_midnight_end' => [new LargeStart],
+            'holiday_start' => [],
+            'holiday_end' => [new LargeStart],
+            'holiday_midnight_start' => [],
+            'holiday_midnight_end' => [new LargeStart],
+            'work_content' => ['required']
         ];
     }
 }
