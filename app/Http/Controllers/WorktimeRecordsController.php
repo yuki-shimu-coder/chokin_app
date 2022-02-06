@@ -58,5 +58,9 @@ class WorktimeRecordsController extends Controller
 
         // 現在のログインユーザーが勤務時間内容を登録する
         Auth::user()->worktime_records()->save($worktimeRecord->fill($request->all()));
+
+        // マイページにリダイレクトする
+        // その時にsessionフラッシュにメッセージを入れる
+        return redirect('/home')->with('flash_message', '超勤を記録しました');
     }
 }

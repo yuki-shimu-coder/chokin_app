@@ -34,7 +34,7 @@ const app = new Vue({
     data: {
         isActive: false,
         disabledWeekday: false,
-        disabledHoliday: false,
+        disabledHoliday: true,
     },
     methods: {
         selectWeekday: function () {

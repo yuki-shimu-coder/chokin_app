@@ -22,10 +22,10 @@
             @enderror
 
             <div>
-              <input type="radio" name="workday-type" id="weekday" v-on:change="selectWeekday">
-              <label for="weekday">平日</label>
-              <input type="radio" name="workday-type" id="holiday" v-on:change="selectHoliday">
-              <label for="holiday">休日</label>
+              <input type="radio" name="workday-type" id="weekday" v-on:change="selectWeekday" value="" checked>
+              <label for="weekday" style="margin-right: 20px;">平日</label>
+              <input type="radio" name="workday-type" id="holiday" v-on:change="selectHoliday" value="">
+              <label for="holiday" style="color: red;">休日</label>
             </div>
 
             {{-- vueのdataを確認 --}}
