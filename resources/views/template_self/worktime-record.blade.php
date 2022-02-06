@@ -13,7 +13,8 @@
         <section class="p-record__date">
           <div class="p-record__head"><i class="fas fa-calendar-alt u-mgr--10"></i>申請日</div>
           <div class="p-record__body">
-            <input type="date" name="record_date" id="" class="@error('record_date') is-invalid @enderror" value="{{ old('record_date') }}">
+            <input type="date" name="record_date" id="" class="@error('record_date') is-invalid @enderror"
+              value="{{ old('record_date') }}">
             @error('record_date')
             <span class="invalid-feedback" role="alert">
               <strong>{{ $message }}</strong>
@@ -41,7 +42,8 @@
                   <select name="weekday_morning_start" id="" class="c-cp_ipselect c-cp_sl02">
                     <option value="">未選択</option>
                     @foreach ($weekday_morning_start as $value)
-                    <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
+                    <option value="{{date('H:i',$value)}}" @if (old('weekday_morning_start')==date('H:i',$value))
+                      selected @endif>{{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
                 </div>
@@ -51,7 +53,8 @@
                   <select name="weekday_morning_end" id="" class="c-cp_ipselect c-cp_sl02">
                     <option value="">未選択</option>
                     @foreach ($weekday_morning_end as $value)
-                    <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
+                    <option value="{{date('H:i',$value)}}" @if (old('weekday_morning_end')==date('H:i',$value)) selected
+                      @endif>{{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
 
@@ -75,7 +78,8 @@
                   <select name="weekday_normal_start" id="" class="c-cp_ipselect c-cp_sl02">
                     <option value="">未選択</option>
                     @foreach ($weekday_normal_start as $value)
-                    <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
+                    <option value="{{date('H:i',$value)}}" @if (old('weekday_normal_start')==date('H:i',$value))
+                      selected @endif>{{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
                 </div>
@@ -84,7 +88,8 @@
                   <select name="weekday_normal_end" id="" class="c-cp_ipselect c-cp_sl02">
                     <option value="">未選択</option>
                     @foreach ($weekday_normal_end as $value)
-                    <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
+                    <option value="{{date('H:i',$value)}}" @if (old('weekday_normal_end')==date('H:i',$value)) selected
+                      @endif>{{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
                 </div>
@@ -107,7 +112,8 @@
                   <select name="weekday_midnight_start" id="" class="c-cp_ipselect c-cp_sl02">
                     <option value="">未選択</option>
                     @foreach ($weekday_midnight_start as $value)
-                    <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
+                    <option value="{{date('H:i',$value)}}" @if (old('weekday_midnight_start')==date('H:i',$value))
+                      selected @endif>{{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
                 </div>
@@ -116,7 +122,8 @@
                   <select name="weekday_midnight_end" id="" class="c-cp_ipselect c-cp_sl02">
                     <option value="">未選択</option>
                     @foreach ($weekday_midnight_end as $value)
-                    <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
+                    <option value="{{date('H:i',$value)}}" @if (old('weekday_midnight_end')==date('H:i',$value))
+                      selected @endif>{{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
                 </div>
@@ -139,7 +146,8 @@
                   <select name="holiday_start" id="" class="c-cp_ipselect c-cp_sl02">
                     <option value="">未選択</option>
                     @foreach ($holiday_start as $value)
-                    <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
+                    <option value="{{date('H:i',$value)}}" @if (old('holiday_start')==date('H:i',$value)) selected
+                      @endif>{{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
                 </div>
@@ -148,7 +156,8 @@
                   <select name="holiday_end" id="" class="c-cp_ipselect c-cp_sl02">
                     <option value="">未選択</option>
                     @foreach ($holiday_end as $value)
-                    <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
+                    <option value="{{date('H:i',$value)}}" @if (old('holiday_end')==date('H:i',$value)) selected @endif>
+                      {{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
                 </div>
@@ -171,7 +180,9 @@
                   <select name="holiday_midnight_start" id="" class="c-cp_ipselect c-cp_sl02">
                     <option value="">未選択</option>
                     @foreach ($holiday_midnight_start as $value)
-                    <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
+                    <option value="{{date('H:i',$value)}}" @if (old('holiday_midnight_start')==date('H:i',$value))
+                      selected @endif>
+                      {{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
                 </div>
@@ -180,7 +191,8 @@
                   <select name="holiday_midnight_end" id="" class="c-cp_ipselect c-cp_sl02">
                     <option value="">未選択</option>
                     @foreach ($holiday_midnight_end as $value)
-                    <option value="{{date('H:i',$value)}}">{{date('H:i',$value)}}</option>
+                    <option value="{{date('H:i',$value)}}" @if (old('holiday_midnight_end')==date('H:i',$value))
+                      selected @endif>{{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
                 </div>
@@ -209,7 +221,7 @@
           <div class="p-record__head"><i class="fas fa-desktop u-mgr--10"></i>超勤理由</div>
           <div class="p-record__body">
             <textarea name="work_content" id="" rows="3" placeholder="超勤理由を入力してください"
-              class="p-record__reason-text @error('work_content') is-invalid @enderror"></textarea>
+              class="p-record__reason-text @error('work_content') is-invalid @enderror">{{old('work_content')}}</textarea>
             @error('work_content')
             <span class="invalid-feedback" role="alert" style="position: relative;top:-18px;">
               <strong>{{ $message }}</strong>
