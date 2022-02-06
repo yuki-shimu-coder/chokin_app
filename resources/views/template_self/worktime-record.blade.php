@@ -13,7 +13,7 @@
         <section class="p-record__date">
           <div class="p-record__head"><i class="fas fa-calendar-alt u-mgr--10"></i>申請日</div>
           <div class="p-record__body">
-            <input type="date" name="record_date" id="" class="@error('record_date') is-invalid @enderror">
+            <input type="date" name="record_date" id="" class="@error('record_date') is-invalid @enderror" value="{{ old('record_date') }}">
             @error('record_date')
             <span class="invalid-feedback" role="alert">
               <strong>{{ $message }}</strong>

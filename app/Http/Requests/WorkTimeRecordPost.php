@@ -29,7 +29,7 @@ class WorkTimeRecordPost extends FormRequest
     {
         return [
             //
-            'record_date' => ['required'],
+            'record_date' => ['required', 'date'],
             'weekday_morning_start' => [],
             'weekday_morning_end' => [new NullTime, new SameTime, new LargeStart],
             'weekday_normal_start' => [],
@@ -40,7 +40,7 @@ class WorkTimeRecordPost extends FormRequest
             'holiday_end' => [new NullTime, new SameTime, new LargeStart],
             'holiday_midnight_start' => [],
             'holiday_midnight_end' => [new NullTime, new SameTime, new LargeStart, new MidnightWorkTime],
-            'work_content' => ['required'],
+            'work_content' => ['required', 'string', 'max:255'],
             'worktimes' => ['required_without_all:weekday_morning_start,weekday_morning_end,weekday_normal_start,weekday_normal_end,weekday_midnight_start,weekday_midnight_end,holiday_start,holiday_end,holiday_midnight_start,holiday_midnight_end']
         ];
     }
