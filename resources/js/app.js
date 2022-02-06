@@ -32,12 +32,21 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
     data: {
-        message: 'hello vue.js',
-        isActive: false
+        isActive: false,
+        disabledWeekday: false,
+        disabledHoliday: false,
     },
     methods: {
-        onClick: function () {
-            console.log('onClick')
+        selectWeekday: function () {
+            console.log('平日だよ！')
+            this.disabledWeekday = false
+            this.disabledHoliday = true
         },
+        selectHoliday: function () {
+            console.log('休日だよ！')
+            this.disabledWeekday = true
+            this.disabledHoliday = false
+        }
+
     }
 });

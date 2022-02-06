@@ -20,6 +20,17 @@
               <strong>{{ $message }}</strong>
             </span>
             @enderror
+
+            <div>
+              <input type="radio" name="workday-type" id="weekday" v-on:change="selectWeekday">
+              <label for="weekday">平日</label>
+              <input type="radio" name="workday-type" id="holiday" v-on:change="selectHoliday">
+              <label for="holiday">休日</label>
+            </div>
+
+            {{-- vueのdataを確認 --}}
+            {{-- <pre>@{{$data}}</pre> --}}
+            
           </div>
         </section>
 
@@ -43,7 +54,7 @@
                     <option value="">未選択</option>
                     @foreach ($weekday_morning_start as $value)
                     <option value="{{date('H:i',$value)}}" @if (old('weekday_morning_start')==date('H:i',$value))
-                      selected @endif>{{date('H:i',$value)}}</option>
+                      selected @endif v-bind:disabled="disabledWeekday">{{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
                 </div>
@@ -54,7 +65,7 @@
                     <option value="">未選択</option>
                     @foreach ($weekday_morning_end as $value)
                     <option value="{{date('H:i',$value)}}" @if (old('weekday_morning_end')==date('H:i',$value)) selected
-                      @endif>{{date('H:i',$value)}}</option>
+                      @endif v-bind:disabled="disabledWeekday">{{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
 
@@ -79,7 +90,7 @@
                     <option value="">未選択</option>
                     @foreach ($weekday_normal_start as $value)
                     <option value="{{date('H:i',$value)}}" @if (old('weekday_normal_start')==date('H:i',$value))
-                      selected @endif>{{date('H:i',$value)}}</option>
+                      selected @endif v-bind:disabled="disabledWeekday">{{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
                 </div>
@@ -89,7 +100,7 @@
                     <option value="">未選択</option>
                     @foreach ($weekday_normal_end as $value)
                     <option value="{{date('H:i',$value)}}" @if (old('weekday_normal_end')==date('H:i',$value)) selected
-                      @endif>{{date('H:i',$value)}}</option>
+                      @endif v-bind:disabled="disabledWeekday">{{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
                 </div>
@@ -113,7 +124,7 @@
                     <option value="">未選択</option>
                     @foreach ($weekday_midnight_start as $value)
                     <option value="{{date('H:i',$value)}}" @if (old('weekday_midnight_start')==date('H:i',$value))
-                      selected @endif>{{date('H:i',$value)}}</option>
+                      selected @endif v-bind:disabled="disabledWeekday">{{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
                 </div>
@@ -123,7 +134,7 @@
                     <option value="">未選択</option>
                     @foreach ($weekday_midnight_end as $value)
                     <option value="{{date('H:i',$value)}}" @if (old('weekday_midnight_end')==date('H:i',$value))
-                      selected @endif>{{date('H:i',$value)}}</option>
+                      selected @endif v-bind:disabled="disabledWeekday">{{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
                 </div>
@@ -147,7 +158,7 @@
                     <option value="">未選択</option>
                     @foreach ($holiday_start as $value)
                     <option value="{{date('H:i',$value)}}" @if (old('holiday_start')==date('H:i',$value)) selected
-                      @endif>{{date('H:i',$value)}}</option>
+                      @endif v-bind:disabled="disabledHoliday">{{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
                 </div>
@@ -156,7 +167,8 @@
                   <select name="holiday_end" id="" class="c-cp_ipselect c-cp_sl02">
                     <option value="">未選択</option>
                     @foreach ($holiday_end as $value)
-                    <option value="{{date('H:i',$value)}}" @if (old('holiday_end')==date('H:i',$value)) selected @endif>
+                    <option value="{{date('H:i',$value)}}" @if (old('holiday_end')==date('H:i',$value)) selected @endif
+                      v-bind:disabled="disabledHoliday">
                       {{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
@@ -181,7 +193,7 @@
                     <option value="">未選択</option>
                     @foreach ($holiday_midnight_start as $value)
                     <option value="{{date('H:i',$value)}}" @if (old('holiday_midnight_start')==date('H:i',$value))
-                      selected @endif>
+                      selected @endif v-bind:disabled="disabledHoliday">
                       {{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
@@ -192,7 +204,7 @@
                     <option value="">未選択</option>
                     @foreach ($holiday_midnight_end as $value)
                     <option value="{{date('H:i',$value)}}" @if (old('holiday_midnight_end')==date('H:i',$value))
-                      selected @endif>{{date('H:i',$value)}}</option>
+                      selected @endif v-bind:disabled="disabledHoliday">{{date('H:i',$value)}}</option>
                     @endforeach
                   </select>
                 </div>
