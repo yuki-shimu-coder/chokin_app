@@ -4,7 +4,7 @@ namespace App\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 
-class LargeStart implements Rule
+class MidnightWorkTime implements Rule
 {
     /**
      * Create a new rule instance.
@@ -25,19 +25,9 @@ class LargeStart implements Rule
      */
     public function passes($attribute, $value)
     {
-
-        // ルールが設定された属性毎に、$start_timeを変更する
-        if ($attribute ===  'weekday_morning_end') {
-            $start_time = strtotime($_POST['weekday_morning_start']);
-            $end_time = strtotime($value);
-        } elseif ($attribute === 'weekday_normal_end') {
-            $start_time = strtotime($_POST['weekday_normal_start']);
-            $end_time = strtotime($value);
-        } elseif ($attribute === 'weekday_midnight_end') {
+        //深夜の勤務時間が７時間以上になっていないかチェックする
+        if ($attribute === 'weekday_midnight_end') {
             $start_time = strtotime($_POST['weekday_midnight_start']);
-            $end_time = strtotime($value);
-        } elseif ($attribute === 'holiday_end') {
-            $start_time = strtotime($_POST['holiday_start']);
             $end_time = strtotime($value);
         } elseif ($attribute === 'holiday_midnight_end') {
             $start_time = strtotime($_POST['holiday_midnight_start']);
@@ -53,9 +43,11 @@ class LargeStart implements Rule
             $end_time += 86400;
         }
 
-        //開始時間が終了時間以降の時間になっていないかチェックする
-        // 開始時刻と終了時刻が同時刻であった場合、trueになってしまうので、同時刻かどうかをチェックするルールを先に実行する必要がある。
-        if ($start_time > $end_time) {
+        $diff_time = ($end_time - $start_time) / 3600;
+
+        // 深夜の勤務時間が７時間を超えた場合は、false
+        // 深夜の勤務時間は最長で７時間(２２時〜５時)
+        if ($diff_time > 7) {
             return false;
         } else {
             return true;
@@ -69,6 +61,6 @@ class LargeStart implements Rule
      */
     public function message()
     {
-        return '終了時刻が開始時刻より前の時刻です。';
+        return '深夜の勤務時間は22時から5時の間で入力してください';
     }
 }

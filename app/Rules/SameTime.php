@@ -52,7 +52,7 @@ class SameTime implements Rule
 
             return true;
 
-            // どちらかしか入力されていない場合はfalse
+            // 開始時刻と終了時刻が同時刻であった場合
         } elseif ($start_time === $end_time) {
 
             //勤務時刻の開始と終了が同じであることはないので、falseとする
