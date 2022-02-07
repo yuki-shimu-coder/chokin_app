@@ -1,4 +1,4 @@
-@extends('app')
+@extends('template_self.app')
 
 @section('title','超勤状況確認ページ')
 
