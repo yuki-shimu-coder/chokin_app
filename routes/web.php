@@ -52,10 +52,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // プロフィール編集画面
-Route::get('profile/edit', 'UsersController@edit')->name('profile-edit');
+Route::get('/profile/edit', 'UsersController@edit')->name('profile-edit');
 
 // プロフィールの更新
-Route::post('profile/edit', 'UsersController@update')->name('profile-update');
+Route::post('/profile/edit', 'UsersController@update')->name('profile-update');
 
 // パスワードの編集画面
 Route::get('/password/edit', 'UsersController@editPassword')->name('password-edit');
