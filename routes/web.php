@@ -71,6 +71,4 @@ Route::get('/worktime/record', 'WorktimeRecordsController@show')->name('worktime
 Route::post('/worktime/record', 'WorktimeRecordsController@record')->name('worktime-record_request');
 
 // 超勤一覧を表示
-Route::get('/workstatus/mypage', function () {
-    return view('template_self.workstatus');
-});
+Route::get('/workstatus/mypage', 'WorkStatusController@show')->name('workstatus-mypage');

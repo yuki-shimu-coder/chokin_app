@@ -63,7 +63,7 @@
             {{-- ログインユーザー --}}
             <ul class="p-header__menu">
               <li class="p-header__menu-item"><a href="{{ route('worktime-record') }}">超勤記録</a></li>
-              <li class="p-header__menu-item"><a href="">超勤の確認</a></li>
+              <li class="p-header__menu-item"><a href="{{ route('workstatus-mypage') }}">超勤の確認</a></li>
               <li class="p-header__menu-item"><a href="">同僚の超勤を確認</a></li>
               <li class="p-header__menu-item"><a href="{{ route('profile-edit') }}">プロフィールを編集</a></li>
               <li class="p-header__menu-item">

@@ -53,7 +53,7 @@ class WorktimeRecordsController extends Controller
     // 超勤内容の登録処理
     public function record(WorkTimeRecordPost $request)
     {
-        // モデルインスタンスを用意
+        // 超勤状況を登録するモデルインスタンスを用意
         $worktimeRecord = new WorktimeRecord;
 
         // 現在のログインユーザーが勤務時間内容を登録する

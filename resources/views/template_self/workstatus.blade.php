@@ -5,7 +5,7 @@
 @section('content')
 <div class="l-container">
   <div class="p-work-status">
-    <h1 class="p-work-status__title u-mgb--40">〇〇さんの超勤状況</h1>
+    <h1 class="p-work-status__title u-mgb--40">{{$user_name}}さんの超勤状況</h1>
     {{-- 超勤状況一覧 --}}
     <section class="p-work-status__history">
       <div class="p-work-status__history-head">
@@ -13,15 +13,20 @@
       </div>
       <div class="p-work-status__history-body">
 
+        @foreach ($work_status as $value)
         <div class="p-work-status__history-contents">
-          <time class="p-work-status__history-date" datetime="2022-01-01">2022年1月1日</time>
+          <time class="p-work-status__history-date" datetime="{{$value->record_date}}">{{$value->record_date}}</time>
+
+
           <div class="p-work-status__history-worktime">
-            <span>3</span>時間
+            <span>{{ $value->oneday_worktime_hour }}</span>時間
             <div style="display:inline;margin-right: 5px;"></div>
-            <span>45</span>分
+            <span>{{ $value->oneday_worktime_minute }}</span>分
           </div>
+
+
           <div class="p-work-status__history-subject">
-            国勢調査集計用務のため国勢調査集計用務のため国勢調査集計用務のため国勢調査集計用務のため国勢調査集計用務のため国勢調
+            {{$value->work_content}}
           </div>
           <div class="p-work-status__history-edit-trigger">
             <i class="fas fa-ellipsis-h"></i>
@@ -38,8 +43,9 @@
             </form>
           </div>
         </div>
+        @endforeach
 
-        <div class="p-work-status__history-contents">
+        {{-- <div class="p-work-status__history-contents">
           <time class="p-work-status__history-date" datetime="2022-01-01">2022年1月1日</time>
           <div class="p-work-status__history-worktime">
             <span>3</span>時間
@@ -53,7 +59,7 @@
             <i class="fas fa-ellipsis-h"></i>
           </div>
           <div class="p-work-status__history-edit-wrap">
-        
+
             <i class="fas fa-times-circle p-work-status__history-edit-close"></i>
             <div class="u-mgb--10">
               <a href="" class="c-button --edit">編集</a>
@@ -62,9 +68,9 @@
               <button class="c-button --delete">削除</button>
             </form>
           </div>
-        </div>
+        </div> --}}
 
-        <div class="p-work-status__history-contents">
+        {{-- <div class="p-work-status__history-contents">
           <time class="p-work-status__history-date" datetime="2022-01-01">2022年1月1日</time>
           <div class="p-work-status__history-worktime">
             <span>3</span>時間
@@ -78,7 +84,7 @@
             <i class="fas fa-ellipsis-h"></i>
           </div>
           <div class="p-work-status__history-edit-wrap">
-        
+
             <i class="fas fa-times-circle p-work-status__history-edit-close"></i>
             <div class="u-mgb--10">
               <a href="" class="c-button --edit">編集</a>
@@ -87,7 +93,7 @@
               <button class="c-button --delete">削除</button>
             </form>
           </div>
-        </div>
+        </div> --}}
 
       </div>
 
