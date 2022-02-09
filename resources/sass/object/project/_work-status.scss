@@ -82,7 +82,7 @@
             }
             &-wrap {
                 position: absolute;
-                top: 15%;
+                top: -5%;
                 right: 0;
                 z-index: 98;
                 padding: var.$space_l;
@@ -94,6 +94,12 @@
                 font-size: 12px;
                 text-align: center;
                 // display: none;
+
+                @include mixin.mq(lg) {
+                    top: -15%;
+                    flex-direction: row;
+                    align-items: center;
+                }
             }
             &-close {
                 position: absolute;

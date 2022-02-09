@@ -19,7 +19,8 @@ class WorkStatusController extends Controller
         $user_name = $user->name;
 
         //超勤状況を取得するために、モデルを用意
-        $work_status = Auth::user()->worktime_records()->get();
+        // 申請日が最新のものから順に取得する（降順）
+        $work_status = Auth::user()->worktime_records()->orderBy('record_date', 'asc')->get();
 
         // 時差計算関数
         function diffTime($record_date, $start_time, $end_time)

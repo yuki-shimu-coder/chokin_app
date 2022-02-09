@@ -14,7 +14,7 @@
       <div class="p-work-status__history-body">
 
         @foreach ($work_status as $value)
-        <div class="p-work-status__history-contents">
+        {{-- <div class="p-work-status__history-contents">
           <time class="p-work-status__history-date" datetime="{{$value->record_date}}">{{$value->record_date}}</time>
 
 
@@ -33,7 +33,7 @@
           </div>
           <div class="p-work-status__history-edit-wrap">
 
-            <i class="fas fa-times-circle p-work-status__history-edit-close"></i>
+            <i class="fas fa-times-circle p-work-status__history-edit-close" style="color: #fff;"></i>
             <div class="u-mgb--10">
               <a href="" class="c-button --edit">編集</a>
             </div>
@@ -42,7 +42,9 @@
               <button class="c-button --delete">削除</button>
             </form>
           </div>
-        </div>
+        </div> --}}
+
+        <workstatus-component></workstatus-component>
         @endforeach
 
       </div>
