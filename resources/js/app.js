@@ -23,6 +23,11 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
+// 超勤状況一覧ページのコンポーネント
+Vue.component('workstatus-component', require('./components/WorkstatusComponent.vue').default);
+
+
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

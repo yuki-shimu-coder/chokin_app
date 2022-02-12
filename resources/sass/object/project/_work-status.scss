@@ -88,23 +88,30 @@
                 padding: var.$space_l;
                 background: rgba(27, 67, 93, 0.8);
                 box-shadow: 0 0 30px #777;
-                display: flex;
                 flex-direction: column;
                 justify-content: center;
                 font-size: 12px;
                 text-align: center;
-                // display: none;
+                display: none;
 
                 @include mixin.mq(lg) {
                     top: -15%;
                     flex-direction: row;
                     align-items: center;
+                    width: 20%;
+                    justify-content: space-around;
+                }
+
+                &.active {
+                    display: flex;
                 }
             }
             &-close {
                 position: absolute;
                 top: 5px;
                 right: 5px;
+                font-size: var.$font-size_default;
+                cursor: pointer;
             }
         }
     }
