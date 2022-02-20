@@ -188,7 +188,8 @@ class WorkStatusController extends Controller
         }
 
         // 更新するレコードを取得（newだと新規登録になるので注意）
-        $worktimeRecord = WorktimeRecord::find($id);
+        // $worktimeRecord = WorktimeRecord::find($id);
+        $worktimeRecord = Auth::user()->worktime_records()->find($id);
 
         // 現在のログインユーザーが勤務時間内容を更新する
         Auth::user()->worktime_records()->save($worktimeRecord->fill($request->all()));
