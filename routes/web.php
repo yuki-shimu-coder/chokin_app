@@ -72,3 +72,9 @@ Route::post('/worktime/record', 'WorktimeRecordsController@record')->name('workt
 
 // 超勤一覧を表示
 Route::get('/workstatus/mypage', 'WorkStatusController@show')->name('workstatus-mypage');
+
+// 超勤記録内容の編集
+Route::get('/workstatus/{id}/edit', 'WorkStatusController@edit')->name('worktime-edit');
+
+// 超勤記録内容の更新
+Route::post('/workstatus/{id}', 'WorkStatusController@update')->name('worktime-update');

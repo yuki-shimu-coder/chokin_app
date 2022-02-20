@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\User;
 use App\WorktimeRecord;
+use App\Http\Requests\WorkTimeRecordPost;
+
 
 
 class WorkStatusController extends Controller
@@ -137,5 +139,62 @@ class WorkStatusController extends Controller
         // dd($work_status);
 
         return view('template_self.workstatus', compact('user_name', 'work_status'));
+    }
+
+    // 超勤一覧から任意の記録を編集する
+    public function edit($id)
+    {
+        // GETパラメータが数字かどうかをチェックする
+        // 事前にチェックしておくことでDBへの無駄なアクセスを減らせる（WEBサーバーへのアクセスのみで済む）
+        if (!ctype_digit($id)) {
+            return redirect('/workstatus/mypage')->with('flash_message', '不正な操作が行われました');
+        }
+
+        // $worktimeRecord = WorktimeRecord::find($id); これだとurlから他のユーザーの記録情報を操作できてしまう
+
+        // 編集は自分が登録したものしかできないようにする
+        $worktimeRecord = Auth::user()->worktime_records()->find($id);
+        
+        // 平日早朝の時刻(5:00~8:30)
+        $weekday_morning_start = range(mktime(5, 0, 0, 0, 0, 0), mktime(8, 15, 0, 0, 0, 0), 60 * 15);
+        $weekday_morning_end = range(mktime(5, 15, 0, 0, 0, 0), mktime(8, 30, 0, 0, 0, 0), 60 * 15);
+
+        // 平日一般の時刻
+        $weekday_normal_start  = range(mktime(17, 15, 0, 0, 0, 0), mktime(21, 45, 0, 0, 0, 0), 60 * 15);
+        $weekday_normal_end = range(mktime(17, 30, 0, 0, 0, 0), mktime(22, 0, 0, 0, 0, 0), 60 * 15);
+
+        // 平日深夜の時刻
+        $weekday_midnight_start = range(mktime(22, 0, 0, 0, 0, 0), mktime(28, 45, 0, 0, 0, 0), 60 * 15);
+        $weekday_midnight_end = range(mktime(22, 15, 0, 0, 0, 0), mktime(29, 0, 0, 0, 0, 0), 60 * 15);
+
+        // 休日一般
+        $holiday_start = range(mktime(5, 0, 0, 0, 0, 0), mktime(21, 45, 0, 0, 0, 0), 60 * 15);
+        $holiday_end = range(mktime(5, 15, 0, 0, 0, 0), mktime(22, 0, 0, 0, 0, 0), 60 * 15);
+
+        // 休日深夜
+        $holiday_midnight_start = range(mktime(22, 0, 0, 0, 0, 0), mktime(28, 45, 0, 0, 0, 0), 60 * 15);
+        $holiday_midnight_end = range(mktime(22, 15, 0, 0, 0, 0), mktime(29, 0, 0, 0, 0, 0), 60 * 15);
+
+        return view('template_self.worktime-edit', compact('worktimeRecord', 'weekday_morning_start', 'weekday_morning_end', 'weekday_normal_start', 'weekday_normal_end', 'weekday_midnight_start', 'weekday_midnight_end', 'holiday_start', 'holiday_end', 'holiday_midnight_start', 'holiday_midnight_end'));
+    }
+
+    // 超勤記録を更新する
+    public function update(WorkTimeRecordPost $request, $id)
+    {
+        // GETパラメータが数字かどうかをチェックする
+        // 事前にチェックしておくことでDBへの無駄なアクセスを減らせる（WEBサーバーへのアクセスのみで済む）
+        if (!ctype_digit($id)) {
+            return redirect('/workstatus/mypage')->with('flash_message', '不正な操作が行われました');
+        }
+
+        // 更新するレコードを取得（newだと新規登録になるので注意）
+        $worktimeRecord = WorktimeRecord::find($id);
+
+        // 現在のログインユーザーが勤務時間内容を更新する
+        Auth::user()->worktime_records()->save($worktimeRecord->fill($request->all()));
+
+        // マイページにリダイレクトする
+        // その時にsessionフラッシュにメッセージを入れる
+        return redirect('/workstatus/mypage')->with('flash_message', '超勤を更新しました');
     }
 }

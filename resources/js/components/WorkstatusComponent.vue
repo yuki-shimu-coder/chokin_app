@@ -12,6 +12,7 @@
 
           <div class="p-work-status__history-subject">
             {{ work_content }}
+            {{edit_route}}
           </div>
           <div class="p-work-status__history-edit-trigger" v-on:click="openEditWrap">
             <i class="fas fa-ellipsis-h"></i>
@@ -22,7 +23,7 @@
 
             <i class="fas fa-times-circle p-work-status__history-edit-close" style="color: #fff;" v-on:click="closeEditWrap"></i>
             <div class="u-mgb--10">
-              <a href="" class="c-button --edit">編集</a>
+              <a v-bind:href="edit" class="c-button --edit">編集</a>
             </div>
             <form action="" method="POST">
               <!-- @csrf -->
@@ -31,6 +32,7 @@
             </form>
           </div> 
           
+            
           <!-- vueのdataを確認  -->
             <!-- <pre>
                 {{$data}}
@@ -44,6 +46,7 @@
 export default {
     // 親コンポーネントからデータを受け取る
     props:{
+        edit:{},
         record_date:{},
         oneday_worktime_hour:{},
         oneday_worktime_minute:{},
@@ -51,7 +54,7 @@ export default {
         csrf:{
           type: String,
           required: true
-        }
+        },
     },
     data: function () {
         return {
@@ -59,7 +62,7 @@ export default {
         };
     },
     mounted() {
-        console.log("Component mounted.");
+        console.log("Component mounted.")
     },
     methods: {
         openEditWrap:function () {

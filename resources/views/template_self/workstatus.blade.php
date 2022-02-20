@@ -44,10 +44,14 @@
           </div>
         </div> --}}
 
-        <workstatus-component record_date="{{$value->record_date}}"
+        <workstatus-component 
+          record_date="{{$value->record_date}}"
           oneday_worktime_hour="{{$value->oneday_worktime_hour}}"
-          oneday_worktime_minute="{{$value->oneday_worktime_minute}}" work_content="{{$value->work_content}}"
-          v-bind:csrf="{{ json_encode(csrf_token()) }}"></workstatus-component>
+          oneday_worktime_minute="{{$value->oneday_worktime_minute}}"
+          work_content="{{$value->work_content}}"
+          v-bind:csrf="{{ json_encode(csrf_token()) }}"
+          edit="{{ route('worktime-edit', ['id' => $value->id]) }}"
+          ></workstatus-component>
         @endforeach
 
       </div>

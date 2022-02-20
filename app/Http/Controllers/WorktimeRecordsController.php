@@ -53,7 +53,7 @@ class WorktimeRecordsController extends Controller
     // 超勤内容の登録処理
     public function record(WorkTimeRecordPost $request)
     {
-        // 超勤状況を登録するモデルインスタンスを用意
+        // 超勤状況を登録するモデルインスタンスを用意(new で新規登録)
         $worktimeRecord = new WorktimeRecord;
 
         // 現在のログインユーザーが勤務時間内容を登録する
@@ -61,6 +61,6 @@ class WorktimeRecordsController extends Controller
 
         // マイページにリダイレクトする
         // その時にsessionフラッシュにメッセージを入れる
-        return redirect('/home')->with('flash_message', '超勤を記録しました');
+        return redirect('/workstatus/mypage')->with('flash_message', '超勤を記録しました');
     }
 }
