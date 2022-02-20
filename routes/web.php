@@ -78,3 +78,6 @@ Route::get('/workstatus/{id}/edit', 'WorkStatusController@edit')->name('worktime
 
 // 超勤記録内容の更新
 Route::post('/workstatus/{id}', 'WorkStatusController@update')->name('worktime-update');
+
+// 超勤記録内容の削除
+Route::post('/workstatus/{id}/delete', 'WorkStatusController@destroy')->name('worktime-delete');

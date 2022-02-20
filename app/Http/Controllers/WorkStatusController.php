@@ -154,7 +154,7 @@ class WorkStatusController extends Controller
 
         // 編集は自分が登録したものしかできないようにする
         $worktimeRecord = Auth::user()->worktime_records()->find($id);
-        
+
         // 平日早朝の時刻(5:00~8:30)
         $weekday_morning_start = range(mktime(5, 0, 0, 0, 0, 0), mktime(8, 15, 0, 0, 0, 0), 60 * 15);
         $weekday_morning_end = range(mktime(5, 15, 0, 0, 0, 0), mktime(8, 30, 0, 0, 0, 0), 60 * 15);
@@ -197,5 +197,20 @@ class WorkStatusController extends Controller
         // マイページにリダイレクトする
         // その時にsessionフラッシュにメッセージを入れる
         return redirect('/workstatus/mypage')->with('flash_message', '超勤を更新しました');
+    }
+
+    // 超勤記録を削除する
+    public function destroy($id)
+    {
+        // GETパラメータが数字かどうかをチェックする
+        // 事前にチェックしておくことでDBへの無駄なアクセスを減らせる（WEBサーバーへのアクセスのみで済む）
+        if (!ctype_digit($id)) {
+            return redirect('/workstatus/mypage')->with('flash_message', '不正な操作が行われました');
+        }
+
+        // 削除するレコードを取得して削除
+        Auth::user()->worktime_records()->find($id)->delete();
+
+        return redirect('/workstatus/mypage')->with('flash_message', '記録を削除しました');
     }
 }

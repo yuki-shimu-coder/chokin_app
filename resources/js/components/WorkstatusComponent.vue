@@ -12,7 +12,6 @@
 
           <div class="p-work-status__history-subject">
             {{ work_content }}
-            {{edit_route}}
           </div>
           <div class="p-work-status__history-edit-trigger" v-on:click="openEditWrap">
             <i class="fas fa-ellipsis-h"></i>
@@ -25,10 +24,10 @@
             <div class="u-mgb--10">
               <a v-bind:href="edit" class="c-button --edit">編集</a>
             </div>
-            <form action="" method="POST">
+            <form v-bind:action="destroy" method="POST">
               <!-- @csrf -->
               <input type="hidden" name="_token" v-bind:value="csrf">
-              <button class="c-button --delete">削除</button>
+              <button class="c-button --delete"  onclick="return confirm('記録を削除します。よろしいですか？')">削除</button>
             </form>
           </div> 
           
@@ -55,6 +54,7 @@ export default {
           type: String,
           required: true
         },
+        destroy:{},
     },
     data: function () {
         return {
