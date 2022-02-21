@@ -12054,9 +12054,20 @@ h1 {
   text-align: center;
 }
 
+.p-work-status__top-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
 .p-work-status__title {
-  font-weight: initial;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .p-work-status__history {
@@ -12172,6 +12183,22 @@ h1 {
   right: 5px;
   font-size: 16px;
   cursor: pointer;
+}
+
+.p-work-status__total-time {
+  background: #07254d;
+  color: #fff;
+  padding: 40px 150px;
+  box-shadow: 5px 5px 14px gray;
+}
+
+.p-work-status__total-time p {
+  font-size: 30px;
+}
+
+.p-work-status__total-time span {
+  font-size: 60px;
+  font-weight: bold;
 }
 
 .p-profile {

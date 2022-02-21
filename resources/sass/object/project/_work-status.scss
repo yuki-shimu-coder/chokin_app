@@ -4,9 +4,19 @@
 .p-work-status {
     text-align: center;
     // font-size: var.$font-size_l;
+    &__top-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        text-align: center;
+        font-weight: bold;
+    }
     &__title {
-        font-weight: initial;
-        font-size: 20px;
+        font-size: var.$font-size_xl;
+        font-weight: bold;
     }
     &__history {
         margin-left: auto;
@@ -113,6 +123,21 @@
                 font-size: var.$font-size_default;
                 cursor: pointer;
             }
+        }
+    }
+    &__total-time {
+        background: #07254d;
+        color: #fff;
+        padding: 40px 150px;
+        box-shadow: 5px 5px 14px gray;
+
+        p {
+            font-size: 30px;
+        }
+
+        span {
+            font-size: 60px;
+            font-weight: bold;
         }
     }
 }
