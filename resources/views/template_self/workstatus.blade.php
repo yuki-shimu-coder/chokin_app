@@ -5,7 +5,9 @@
 @section('content')
 <div class="l-container">
   <div class="p-work-status">
-    <div class="p-work-status__top-wrapper">
+    
+    {{-- ユーザー名及び超勤総計表示 --}}
+    <section class="p-work-status__top-wrapper">
       <div>
         <h1 class="p-work-status__title">{{$user_name}}さんの超勤状況</h1>
       </div>
@@ -15,7 +17,7 @@
         <div style="display:inline;margin-right: 5px;"></div>
         <span>{{$total_worktime_minute}}</span>分
       </div>
-    </div>
+    </section>
 
 
     {{-- 超勤状況一覧 --}}
